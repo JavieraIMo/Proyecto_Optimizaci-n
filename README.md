@@ -36,7 +36,11 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 2. `supuestos_generador.md` - Documentación detallada de supuestos
 3. `instancia_ejemplo.json` - Instancia de ejemplo generada (original)
 4. `instancia_ejemplo.dzn` - Datos para MiniZinc (original)
-5. `instancias_profesor/` - 15 instancias según especificaciones (5 pequeñas, 5 medianas, 5 grandes)
+
+**Al ejecutar el generador se crean:**
+- `instancias_profesor/` - Directorio con 15 instancias (5 pequeñas, 5 medianas, 5 grandes)
+- Archivos JSON y DZN para cada instancia
+- Resumen estadístico en markdown
 
 **Características del generador:**
 - Cumple especificaciones exactas del profesor
@@ -71,20 +75,23 @@ python generador_instancias.py --semilla 42 --directorio mis_instancias
 # - Resumen estadístico en markdown
 ```
 
+**📋 Nota para el profesor:**
+> Las instancias NO están pre-generadas. Ejecute el comando anterior para crear las 15 instancias según sus especificaciones. Esto garantiza que puede verificar la generación desde cero.
+
 **Especificaciones técnicas:**
 - **Distribuciones**: Uniforme U(0,10) para disposición, Normal para demanda
 - **Tamaños**: Según tabla del profesor (pequeñas, medianas, grandes)
 - **Replicabilidad**: Semilla base + offset para cada instancia
 - **Formatos**: JSON (legible) + DZN (MiniZinc)
 
-**Instancias generadas:**
+**Instancias que se generan al ejecutar:**
 - **15 instancias totales** según especificaciones del profesor
 - **5 pequeñas**: 5-15 trabajadores, 5-7 días
 - **5 medianas**: 15-45 trabajadores, 7-14 días  
 - **5 grandes**: 45-90 trabajadores, 14-28 días
 - **Distribuciones correctas**: U(0,10) para disposición, Normal para demanda
 - **Reproducibles**: Cada instancia tiene semilla específica
-- **Documentadas**: Resumen estadístico incluido
+- **Documentadas**: Resumen estadístico incluido automáticamente
 
 **Instancia de ejemplo original:**
 - 8 trabajadores, 14 días (2 semanas)
