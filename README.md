@@ -34,15 +34,19 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 **Archivos entregados:**
 1. `generador_instancias.py` - Script principal en Python
 2. `supuestos_generador.md` - Documentación detallada de supuestos
-3. `instancia_ejemplo.json` - Instancia de ejemplo generada
-4. `instancia_ejemplo.dzn` - Datos para MiniZinc
+3. `instancia_ejemplo.json` - Instancia de ejemplo generada (original)
+4. `instancia_ejemplo.dzn` - Datos para MiniZinc (original)
+5. `instancias_profesor/` - 15 instancias según especificaciones (5 pequeñas, 5 medianas, 5 grandes)
 
 **Características del generador:**
-- Configurable en número de trabajadores, días y semilla
-- Genera demanda realista con variaciones por tipo de día
-- Crea puntajes de disposición con preferencias individuales
-- Produce archivos compatibles con MiniZinc
-- Incluye validación y estadísticas
+- Cumple especificaciones exactas del profesor
+- Genera 5 instancias por cada tamaño (pequeñas, medianas, grandes)
+- Distribución Uniforme U(0,10) para puntajes de disposición
+- Distribución Normal para demanda de personal por turno
+- Rangos específicos según tabla del profesor
+- Semillas reproducibles para cada instancia
+- Produce archivos JSON y DZN compatibles con MiniZinc
+- Incluye resumen estadístico de todas las instancias
 
 **Supuestos principales:**
 - Demanda mayor en fines de semana
@@ -53,28 +57,36 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 
 **Uso del generador:**
 ```bash
-# Instancia estándar (8 trabajadores, 14 días, semilla por defecto)
-python generador_instancias.py --trabajadores 8 --dias 14 --archivo mi_instancia.json
+# Generar todas las 15 instancias según especificaciones del profesor
+python generador_instancias.py --semilla 42
 
-# Con semilla personalizada para replicabilidad
-python generador_instancias.py --trabajadores 8 --dias 14 --semilla 42 --archivo mi_instancia.json
-
-# Diferentes semillas generan diferentes instancias
-python generador_instancias.py --trabajadores 8 --dias 14 --semilla 123 --archivo instancia_var1.json
-python generador_instancias.py --trabajadores 8 --dias 14 --semilla 456 --archivo instancia_var2.json
+# Generar en directorio personalizado
+python generador_instancias.py --semilla 42 --directorio mis_instancias
 
 # Genera automáticamente:
-# - mi_instancia.json (datos completos)
-# - mi_instancia.dzn (formato MiniZinc)
+# - 5 instancias pequeñas (5-15 trabajadores, 5-7 días)
+# - 5 instancias medianas (15-45 trabajadores, 7-14 días)  
+# - 5 instancias grandes (45-90 trabajadores, 14-28 días)
+# - Archivos JSON y DZN para cada instancia
+# - Resumen estadístico en markdown
 ```
 
-**Replicabilidad con semillas:**
-- **Misma semilla = Misma instancia**: Garantiza reproducibilidad exacta de experimentos
-- **Semilla por defecto**: 42 (para consistencia en todas las pruebas)
-- **Comparación justa**: Permite probar diferentes algoritmos con datos idénticos
-- **Debugging**: Reproduce exactamente la misma situación si hay errores
+**Especificaciones técnicas:**
+- **Distribuciones**: Uniforme U(0,10) para disposición, Normal para demanda
+- **Tamaños**: Según tabla del profesor (pequeñas, medianas, grandes)
+- **Replicabilidad**: Semilla base + offset para cada instancia
+- **Formatos**: JSON (legible) + DZN (MiniZinc)
 
-**Instancia de ejemplo generada:**
+**Instancias generadas:**
+- **15 instancias totales** según especificaciones del profesor
+- **5 pequeñas**: 5-15 trabajadores, 5-7 días
+- **5 medianas**: 15-45 trabajadores, 7-14 días  
+- **5 grandes**: 45-90 trabajadores, 14-28 días
+- **Distribuciones correctas**: U(0,10) para disposición, Normal para demanda
+- **Reproducibles**: Cada instancia tiene semilla específica
+- **Documentadas**: Resumen estadístico incluido
+
+**Instancia de ejemplo original:**
 - 8 trabajadores, 14 días (2 semanas)
 - 136 turnos de demanda total
 - Demanda promedio: 3.2 trabajadores por turno

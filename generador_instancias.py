@@ -1,279 +1,259 @@
 """
-Generador de Instancias para el Problema de Asignación de Personal por Turnos
-Proyecto INF292 - Entrega 1
-Autores: Javiera Ibaca, Sebastían Guzmán, Jorge Ríos
-Fecha: Octubre 2025
-
-Este script genera instancias del problema de asignación de personal considerando:
-- Trabajadores con diferentes niveles de disposición
-- Demanda variable por día y turno
-- Horizonte de planificación configurable
+Generador de Instancias ACTUALIZADO según especificaciones del profesor
+- 5 instancias por tamaño (pequeñas, medianas, grandes)
+- Distribución Uniforme U(0,10) para disposición
+- Distribución Normal para demanda por turno
+- Rangos específicos según tabla del profesor
 """
 
 import random
 import numpy as np
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 import argparse
+import os
 
-class GeneradorInstancias:
-    def __init__(self, num_trabajadores=10, horizonte_dias=14, semilla=42):
+class GeneradorInstanciasProfesor:
+    def __init__(self, semilla=42):
         """
-        Inicializa el generador de instancias.
-        
-        Args:
-            num_trabajadores (int): Número de trabajadores disponibles
-            horizonte_dias (int): Número de días en el horizonte de planificación
-            semilla (int): Semilla para reproducibilidad
+        Generador según especificaciones del profesor.
         """
-        self.P = num_trabajadores  # Conjunto de trabajadores
-        self.H = horizonte_dias    # Horizonte en días
-        self.W = (horizonte_dias + 6) // 7  # Número de semanas
-        self.turnos = ['m', 't', 'n']  # mañana, tarde, noche
-        
-        # Configurar semilla para reproducibilidad
+        self.semilla = semilla
         random.seed(semilla)
         np.random.seed(semilla)
+        self.turnos = ['m', 't', 'n']  # mañana, tarde, noche
         
-        # Nombres de trabajadores para hacer más realista la instancia
-        self.nombres_trabajadores = [
-            f"Trabajador_{i+1}" for i in range(num_trabajadores)
-        ]
+        # Rangos según tabla del profesor
+        self.tamaños = {
+            'pequeñas': {
+                'dias': (5, 7),
+                'trabajadores': (5, 15),
+                'nombre': 'Pequeñas'
+            },
+            'medianas': {
+                'dias': (7, 14),
+                'trabajadores': (15, 45),
+                'nombre': 'Medianas'
+            },
+            'grandes': {
+                'dias': (14, 28),
+                'trabajadores': (45, 90),
+                'nombre': 'Grandes'
+            }
+        }
     
-    def generar_demanda(self):
+    def generar_demanda_normal(self, num_dias):
         """
-        Genera la demanda de personal por día y turno.
+        Genera demanda usando distribución Normal.
         
-        Supuestos:
-        - Los fines de semana tienen mayor demanda
-        - Los turnos de noche tienen menor demanda
-        - La demanda varía entre 2 y 6 trabajadores por turno
+        Parámetros distribucionales justificados:
+        - Media: Basada en operaciones típicas por turno
+        - Desviación: 20% de la media para variabilidad realista
         """
         demanda = {}
         
-        for d in range(1, self.H + 1):
-            # Determinar si es fin de semana (sábado=6, domingo=0 en módulo 7)
+        # Parámetros de distribución Normal por turno
+        parametros_turnos = {
+            'm': {'media': 4.0, 'std': 0.8},  # Mañana: mayor actividad
+            't': {'media': 3.0, 'std': 0.6},  # Tarde: actividad media
+            'n': {'media': 2.0, 'std': 0.4}   # Noche: menor actividad
+        }
+        
+        for d in range(1, num_dias + 1):
+            # Determinar si es fin de semana
             dia_semana = d % 7
             es_fin_semana = (dia_semana == 6 or dia_semana == 0)
             
             for t in self.turnos:
-                # Demanda base
-                if t == 'n':  # noche
-                    demanda_base = 2
-                elif t == 'm':  # mañana
-                    demanda_base = 4
-                else:  # tarde
-                    demanda_base = 3
+                params = parametros_turnos[t]
                 
-                # Incrementar demanda en fin de semana
+                # Generar demanda base con distribución Normal
+                demanda_base = np.random.normal(params['media'], params['std'])
+                
+                # Incrementar en fin de semana
                 if es_fin_semana:
-                    factor_fin_semana = 1.5 if t != 'n' else 1.2
-                    demanda_base = int(demanda_base * factor_fin_semana)
+                    factor = 1.3 if t != 'n' else 1.1
+                    demanda_base *= factor
                 
-                # Añadir variablidad aleatoria
-                variacion = random.randint(-1, 1)
-                demanda_final = max(1, demanda_base + variacion)
+                # Asegurar que sea entero positivo ≥ 1
+                demanda_final = max(1, int(round(demanda_base)))
                 
                 demanda[(d, t)] = demanda_final
         
         return demanda
     
-    def generar_puntajes_disposicion(self):
+    def generar_disposicion_uniforme(self, num_trabajadores, num_dias):
         """
-        Genera los puntajes de disposición de cada trabajador para cada día-turno.
+        Genera puntajes de disposición con distribución Uniforme U(0,10).
         
-        Supuestos:
-        - Cada trabajador tiene preferencias por ciertos turnos
-        - Los puntajes van de 0 a 10
-        - Algunos trabajadores prefieren mañanas, otros tardes o noches
-        - La disposición puede variar por día (cansancio, compromisos)
+        Justificación: Distribución uniforme asegura que todos los
+        niveles de disposición (0 a 10) tengan igual probabilidad.
         """
         puntajes = {}
         
-        # Asignar preferencias básicas a cada trabajador
-        preferencias_trabajadores = {}
-        for p in range(1, self.P + 1):
-            # Cada trabajador tiene un turno preferido y uno menos preferido
-            turno_preferido = random.choice(self.turnos)
-            turno_menos_preferido = random.choice([t for t in self.turnos if t != turno_preferido])
-            
-            preferencias_trabajadores[p] = {
-                'preferido': turno_preferido,
-                'menos_preferido': turno_menos_preferido,
-                'nivel_base': random.randint(5, 8)  # Nivel base de disposición
-            }
-        
-        # Generar puntajes para cada combinación trabajador-día-turno
-        for p in range(1, self.P + 1):
-            pref = preferencias_trabajadores[p]
-            
-            for d in range(1, self.H + 1):
-                # Factor de cansancio (reduce disposición en días consecutivos)
-                factor_cansancio = 1.0 - (d % 7) * 0.05
-                
+        for p in range(1, num_trabajadores + 1):
+            for d in range(1, num_dias + 1):
                 for t in self.turnos:
-                    puntaje_base = pref['nivel_base']
-                    
-                    # Ajustar según preferencias de turno
-                    if t == pref['preferido']:
-                        puntaje_base += 2
-                    elif t == pref['menos_preferido']:
-                        puntaje_base -= 2
-                    
-                    # Aplicar factor de cansancio
-                    puntaje_base = int(puntaje_base * factor_cansancio)
-                    
-                    # Añadir variabilidad aleatoria diaria
-                    variacion = random.randint(-1, 2)
-                    puntaje_final = max(0, min(10, puntaje_base + variacion))
-                    
-                    puntajes[(p, d, t)] = puntaje_final
+                    # Distribución Uniforme U(0,10)
+                    puntaje = random.randint(0, 10)
+                    puntajes[(p, d, t)] = puntaje
         
         return puntajes
     
-    def generar_instancia(self, nombre_archivo=None):
+    def generar_instancia_tamaño(self, tamaño, numero_instancia):
         """
-        Genera una instancia completa del problema.
-        
-        Returns:
-            dict: Diccionario con todos los datos de la instancia
+        Genera una instancia específica para un tamaño dado.
         """
-        print(f"Generando instancia con {self.P} trabajadores y {self.H} días...")
+        config = self.tamaños[tamaño]
         
-        # Generar todos los componentes
-        demanda = self.generar_demanda()
-        puntajes = self.generar_puntajes_disposicion()
+        # Generar parámetros aleatorios dentro del rango
+        num_dias = random.randint(*config['dias'])
+        num_trabajadores = random.randint(*config['trabajadores'])
+        num_semanas = (num_dias + 6) // 7
         
-        # Crear estructura de datos completa
+        print(f"Generando instancia {numero_instancia} - {config['nombre']}: "
+              f"{num_trabajadores} trabajadores, {num_dias} días")\
+        
+        # Generar datos
+        demanda = self.generar_demanda_normal(num_dias)
+        puntajes = self.generar_disposicion_uniforme(num_trabajadores, num_dias)
+        
+        # Crear estructura de datos
         instancia = {
             'metadata': {
-                'num_trabajadores': self.P,
-                'horizonte_dias': self.H,
-                'num_semanas': self.W,
+                'tamaño': config['nombre'],
+                'numero_instancia': numero_instancia,
+                'num_trabajadores': num_trabajadores,
+                'horizonte_dias': num_dias,
+                'num_semanas': num_semanas,
                 'turnos': self.turnos,
+                'semilla_base': self.semilla,
                 'fecha_generacion': datetime.now().isoformat(),
-                'descripcion': 'Instancia generada para problema de asignación de personal por turnos'
+                'distribucion_demanda': 'Normal con parámetros por turno',
+                'distribucion_disposicion': 'Uniforme U(0,10)'
             },
             'trabajadores': {
-                i+1: self.nombres_trabajadores[i] for i in range(self.P)
+                i+1: f"Trabajador_{i+1}" for i in range(num_trabajadores)
             },
             'demanda': {
                 f"dia_{d}_turno_{t}": demanda[(d, t)]
-                for d in range(1, self.H + 1)
+                for d in range(1, num_dias + 1)
                 for t in self.turnos
             },
             'puntajes_disposicion': {
                 f"trabajador_{p}_dia_{d}_turno_{t}": puntajes[(p, d, t)]
-                for p in range(1, self.P + 1)
-                for d in range(1, self.H + 1)
+                for p in range(1, num_trabajadores + 1)
+                for d in range(1, num_dias + 1)
                 for t in self.turnos
             }
         }
         
-        # Guardar archivo si se especifica nombre
-        if nombre_archivo:
-            with open(nombre_archivo, 'w', encoding='utf-8') as f:
-                json.dump(instancia, f, indent=2, ensure_ascii=False)
-            print(f"Instancia guardada en: {nombre_archivo}")
-        
         return instancia
     
     def generar_archivo_minizinc(self, instancia, nombre_archivo):
-        """
-        Genera un archivo de datos compatible con MiniZinc.
-        
-        Args:
-            instancia (dict): Instancia generada
-            nombre_archivo (str): Nombre del archivo .dzn a crear
-        """
+        """Genera archivo DZN para MiniZinc."""
         with open(nombre_archivo, 'w', encoding='utf-8') as f:
-            # Parámetros básicos
-            f.write(f"% Archivo de datos para MiniZinc\n")
-            f.write(f"% Generado automáticamente el {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+            f.write(f"% Instancia {instancia['metadata']['tamaño']} #{instancia['metadata']['numero_instancia']}\n")
+            f.write(f"% Generada el {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
             
-            f.write(f"num_trabajadores = {self.P};\n")
-            f.write(f"horizonte_dias = {self.H};\n")
-            f.write(f"num_semanas = {self.W};\n\n")
+            f.write(f"num_trabajadores = {instancia['metadata']['num_trabajadores']};\n")
+            f.write(f"horizonte_dias = {instancia['metadata']['horizonte_dias']};\n")
+            f.write(f"num_semanas = {instancia['metadata']['num_semanas']};\n\n")
             
-            # Demanda por día y turno
-            f.write("% Demanda por día y turno [día, turno]\n")
+            # Demanda
             f.write("demanda = array2d(1..horizonte_dias, 1..3, [\n")
-            for d in range(1, self.H + 1):
+            for d in range(1, instancia['metadata']['horizonte_dias'] + 1):
                 valores = [str(instancia['demanda'][f"dia_{d}_turno_{t}"]) for t in self.turnos]
                 f.write(f"  {', '.join(valores)}")
-                if d < self.H:
+                if d < instancia['metadata']['horizonte_dias']:
                     f.write(",")
                 f.write("\n")
             f.write("]);\n\n")
             
-            # Puntajes de disposición
-            f.write("% Puntajes de disposición [trabajador, día, turno]\n")
+            # Puntajes
             f.write("puntajes = array3d(1..num_trabajadores, 1..horizonte_dias, 1..3, [\n")
-            for p in range(1, self.P + 1):
-                for d in range(1, self.H + 1):
+            for p in range(1, instancia['metadata']['num_trabajadores'] + 1):
+                for d in range(1, instancia['metadata']['horizonte_dias'] + 1):
                     valores = [str(instancia['puntajes_disposicion'][f"trabajador_{p}_dia_{d}_turno_{t}"]) for t in self.turnos]
                     f.write(f"  {', '.join(valores)}")
-                    if p < self.P or d < self.H:
+                    if p < instancia['metadata']['num_trabajadores'] or d < instancia['metadata']['horizonte_dias']:
                         f.write(",")
                     f.write("\n")
             f.write("]);\n")
-        
-        print(f"Archivo MiniZinc guardado en: {nombre_archivo}")
     
-    def mostrar_resumen(self, instancia):
+    def generar_todas_las_instancias(self, directorio_salida="instancias_profesor"):
         """
-        Muestra un resumen estadístico de la instancia generada.
+        Genera las 15 instancias requeridas (5 por cada tamaño).
         """
-        print("\n" + "="*60)
-        print("RESUMEN DE LA INSTANCIA GENERADA")
-        print("="*60)
+        if not os.path.exists(directorio_salida):
+            os.makedirs(directorio_salida)
         
-        print(f"Trabajadores: {self.P}")
-        print(f"Días: {self.H}")
-        print(f"Semanas: {self.W}")
-        print(f"Turnos por día: {len(self.turnos)} (mañana, tarde, noche)")
+        resumen = []
         
-        # Estadísticas de demanda
-        demandas = [v for k, v in instancia['demanda'].items()]
-        print(f"\nDemanda total: {sum(demandas)} turnos")
-        print(f"Demanda promedio por turno: {np.mean(demandas):.1f}")
-        print(f"Demanda mínima: {min(demandas)}")
-        print(f"Demanda máxima: {max(demandas)}")
+        for tamaño in ['pequeñas', 'medianas', 'grandes']:
+            print(f"\n=== Generando instancias {tamaño.upper()} ===")
+            
+            for i in range(1, 6):  # 5 instancias por tamaño
+                # Usar semilla diferente para cada instancia
+                semilla_instancia = self.semilla + (len(resumen))
+                random.seed(semilla_instancia)
+                np.random.seed(semilla_instancia)
+                
+                instancia = self.generar_instancia_tamaño(tamaño, i)
+                
+                # Nombres de archivos
+                nombre_base = f"{tamaño}_{i:02d}"
+                archivo_json = f"{directorio_salida}/{nombre_base}.json"
+                archivo_dzn = f"{directorio_salida}/{nombre_base}.dzn"
+                
+                # Guardar archivos
+                with open(archivo_json, 'w', encoding='utf-8') as f:
+                    json.dump(instancia, f, indent=2, ensure_ascii=False)
+                
+                self.generar_archivo_minizinc(instancia, archivo_dzn)
+                
+                # Estadísticas para resumen
+                stats = {
+                    'archivo': nombre_base,
+                    'tamaño': tamaño,
+                    'trabajadores': instancia['metadata']['num_trabajadores'],
+                    'dias': instancia['metadata']['horizonte_dias'],
+                    'demanda_total': sum(instancia['demanda'].values()),
+                    'disposicion_promedio': np.mean(list(instancia['puntajes_disposicion'].values()))
+                }
+                resumen.append(stats)
         
-        # Estadísticas de puntajes
-        puntajes = [v for k, v in instancia['puntajes_disposicion'].items()]
-        print(f"\nPuntaje promedio de disposición: {np.mean(puntajes):.1f}")
-        print(f"Puntaje mínimo: {min(puntajes)}")
-        print(f"Puntaje máximo: {max(puntajes)}")
-        
-        print("="*60)
+        self.generar_resumen(resumen, directorio_salida)
+        return resumen
+    
+    def generar_resumen(self, estadisticas, directorio):
+        """Genera un resumen de todas las instancias."""
+        with open(f"{directorio}/resumen_instancias.md", 'w', encoding='utf-8') as f:
+            f.write("# Resumen de Instancias Generadas\n\n")
+            f.write("Generadas según especificaciones del profesor:\n")
+            f.write("- 5 instancias por tamaño\n")
+            f.write("- Distribución Uniforme U(0,10) para disposición\n")
+            f.write("- Distribución Normal para demanda\n\n")
+            
+            f.write("| Archivo | Tamaño | Trabajadores | Días | Demanda Total | Disposición Promedio |\n")
+            f.write("|---------|--------|--------------|------|---------------|---------------------|\n")
+            
+            for stats in estadisticas:
+                f.write(f"| {stats['archivo']} | {stats['tamaño']} | {stats['trabajadores']} | "
+                       f"{stats['dias']} | {stats['demanda_total']} | {stats['disposicion_promedio']:.1f} |\n")
 
 def main():
-    """Función principal para ejecutar el generador desde línea de comandos."""
-    parser = argparse.ArgumentParser(description='Generador de instancias para asignación de personal')
-    parser.add_argument('--trabajadores', type=int, default=10, help='Número de trabajadores')
-    parser.add_argument('--dias', type=int, default=14, help='Horizonte en días')
-    parser.add_argument('--semilla', type=int, default=42, help='Semilla para reproducibilidad')
-    parser.add_argument('--archivo', type=str, default='instancia.json', help='Nombre del archivo de salida')
+    parser = argparse.ArgumentParser(description='Generador según especificaciones del profesor')
+    parser.add_argument('--semilla', type=int, default=42, help='Semilla base')
+    parser.add_argument('--directorio', type=str, default='instancias_profesor', help='Directorio de salida')
     
     args = parser.parse_args()
     
-    # Crear generador
-    generador = GeneradorInstancias(
-        num_trabajadores=args.trabajadores,
-        horizonte_dias=args.dias,
-        semilla=args.semilla
-    )
+    generador = GeneradorInstanciasProfesor(semilla=args.semilla)
+    estadisticas = generador.generar_todas_las_instancias(args.directorio)
     
-    # Generar instancia
-    instancia = generador.generar_instancia(args.archivo)
-    
-    # Generar archivo para MiniZinc
-    nombre_dzn = args.archivo.replace('.json', '.dzn')
-    generador.generar_archivo_minizinc(instancia, nombre_dzn)
-    
-    # Mostrar resumen
-    generador.mostrar_resumen(instancia)
+    print(f"\n✅ Generadas 15 instancias en directorio: {args.directorio}")
+    print(f"📊 Ver resumen en: {args.directorio}/resumen_instancias.md")
 
 if __name__ == "__main__":
     main()
