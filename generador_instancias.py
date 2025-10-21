@@ -16,14 +16,14 @@ import os
 class GeneradorInstanciasProfesor:
     def __init__(self, semilla=42):
         """
-        Generador según especificaciones del profesor.
+        Generador según especificaciones 
         """
         self.semilla = semilla
         random.seed(semilla)
         np.random.seed(semilla)
         self.turnos = ['m', 't', 'n']  # mañana, tarde, noche
         
-        # Rangos según tabla del profesor
+        # Rangos según tabla 
         self.tamaños = {
             'pequeñas': {
                 'dias': (5, 7),
@@ -181,7 +181,7 @@ class GeneradorInstanciasProfesor:
                     f.write("\n")
             f.write("]);\n")
     
-    def generar_todas_las_instancias(self, directorio_salida="instancias_profesor"):
+    def generar_todas_las_instancias(self, directorio_salida="instancias"):
         """
         Genera las 15 instancias requeridas (5 por cada tamaño).
         """
@@ -245,15 +245,15 @@ class GeneradorInstanciasProfesor:
 def main():
     parser = argparse.ArgumentParser(description='Generador según especificaciones del profesor')
     parser.add_argument('--semilla', type=int, default=42, help='Semilla base')
-    parser.add_argument('--directorio', type=str, default='instancias_profesor', help='Directorio de salida')
+    parser.add_argument('--directorio', type=str, default='instancias', help='Directorio de salida')
     
     args = parser.parse_args()
     
     generador = GeneradorInstanciasProfesor(semilla=args.semilla)
     estadisticas = generador.generar_todas_las_instancias(args.directorio)
     
-    print(f"\n✅ Generadas 15 instancias en directorio: {args.directorio}")
-    print(f"📊 Ver resumen en: {args.directorio}/resumen_instancias.md")
+    print(f"\n Generadas 15 instancias en directorio: {args.directorio}")
+    print(f" Ver resumen en: {args.directorio}/resumen_instancias.md")
 
 if __name__ == "__main__":
     main()

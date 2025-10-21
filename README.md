@@ -38,7 +38,7 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 4. `instancia_ejemplo.dzn` - Datos para MiniZinc (original)
 
 **Al ejecutar el generador se crean:**
-- `instancias_profesor/` - Directorio con 15 instancias (5 pequeñas, 5 medianas, 5 grandes)
+- `instancias/` - Directorio con 15 instancias (5 pequeñas, 5 medianas, 5 grandes)
 - Archivos JSON y DZN para cada instancia
 - Resumen estadístico en markdown
 
