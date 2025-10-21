@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath,amssymb}
+
+
+\title{Entrega 1 Proyecto INF292}
+\author{Jorge Ríos}
+\date{October 2025}
+
+\begin{document}
+
+\section*{Introducción}
+
+\section*{Modelo de optimización: Asignación de personal por turnos}
+
+\subsection*{Conjuntos e índices}
+\[
+\begin{aligned}
+&\mathcal{P} &&\text{: conjunto de trabajadores (personas), índices } p\in\mathcal{P}.\\
+&\mathcal{D} &&\text{: conjunto de días del horizonte } \{1,\dots,H\},\; \text{índice } d\in\mathcal{D}.\\
+&\mathcal{T} &&\text{: conjunto de turnos } \{m,t,n\} \ (\text{mañana},\ \text{tarde},\ \text{noche}),\; \text{índice } t\in\mathcal{T}.\\
+&\mathcal{W} &&\text{: conjunto de semanas } \{1,\dots,W\},\; \text{índice } w\in\mathcal{W},
+\end{aligned}
+\]
+donde \(H\) es el número total de d\'ias (el horizonte, comienza en lunes) y \(W=\lceil H/7\rceil\) es el número de semanas completas/partes de semana en el horizonte.  
+Definimos la aplicación \(\omega(d)=\left\lceil \frac{d}{7}\right\rceil\) que asigna cada día \(d\) a su semana \(\omega(d)\). Los días se enumeran con lunes = 1, martes = 2, \dots, domingo = 7, luego lunes = 8, etc.
+
+\subsection*{Parámetros}
+\[
+\begin{aligned}
+&\text{dem}_{d,t} \in \mathbb{Z}_{\ge 0} &&\text{: demanda (personal requerido) en el dáa } d \text{ y turno } t.\\
+&s_{p,d,t} \in \{0,1,\dots,10\} &&\text{: puntaje de disposición del trabajador } p \text{ para } (d,t).\\
+\end{aligned}
+\]
+
+\subsection*{Variables}
+\[
+\begin{aligned}
+&x_{p,d,t} \in \{0,1\} &&\text{: 1 si el trabajador } p \text{ está asignado el día } d \text{ en el turno } t,\ \text{0 en otro caso.}\\
+&y_{p,w} \in \{0,1\} &&\text{: 1 si el trabajador } p \text{ trabaja al menos un turno en el fin de semana de la semana } w,\ \text{0 si no.}
+\end{aligned}
+\]
+
+\subsection*{Función objetivo}
+Maximizar la disposición total del personal asignado:
+\[
+\max \; Z \;=\; \sum_{p\in\mathcal{P}}\sum_{d\in\mathcal{D}}\sum_{t\in\mathcal{T}} s_{p,d,t}\, x_{p,d,t}.
+\]
+
+\subsection*{Restricciones}
+
+% Cobertura
+\paragraph{1. Cobertura por día-turno (cumplir la demanda):}
+\[
+\forall d\in\mathcal{D},\ \forall t\in\mathcal{T}:\qquad
+\sum_{p\in\mathcal{P}} x_{p,d,t} \;\ge\; \text{dem}_{d,t}.
+\tag{R1}
+\]
+
+% M\'aximo 2 turnos por d\'ia
+\paragraph{2. Ningún trabajador puede hacer más de dos turnos en el mismo día:}
+\[
+\forall p\in\mathcal{P},\ \forall d\in\mathcal{D}:\qquad
+\sum_{t\in\mathcal{T}} x_{p,d,t} \;\le\; 2.
+\tag{R2}
+\]
+
+% Prohibir noche seguido de mañana
+\paragraph{3. Prohibición de turno noche seguido por turno mañana al día siguiente:}
+\[
+\forall p\in\mathcal{P},\ \forall d\in\{1,\dots,H-1\}:\qquad
+x_{p,d,\text{n}} + x_{p,d+1,\text{m}} \;\le\; 1.
+\tag{R3}
+\]
+
+% Definir weekend y link con y_{p,w}
+\paragraph{4. Definición de ``fin de semana trabajado'' y vinculación con y_{p,w}:}
+Sea el conjunto de días del fin de semana en la semana \(w\):
+\[
+\mathcal{D}_{\text{wk}}(w) \;=\; \{\, d\in\mathcal{D} : \omega(d)=w \text{ y } d\ \text{es sábado o domingo}\,\}.
+\]
+(Con la numeración que usamos, los días con residuo modulo 7 iguales a 6 y 0 corresponden a sábado y domingo respectivamente.)\\
+Para forzar que \(y_{p,w}=1\) si y sólo si la persona trabaja al menos un turno en ese fin de semana, podemos imponer:
+\[
+\forall p\in\mathcal{P},\ \forall w\in\mathcal{W}:\qquad
+\begin{aligned}
+&\sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t\in\mathcal{T}} x_{p,d,t} \;\ge\; y_{p,w},\\
+&\forall d\in\mathcal{D}_{\text{wk}}(w),\ \forall t\in\mathcal{T}:\quad x_{p,d,t} \;\le\; y_{p,w}.
+\end{aligned}
+\tag{R4}
+\]
+La primera desigualdad garantiza que si hay alguna asignación en el fin de semana entonces \(y_{p,w}\) puede ser 1 (y debe ser 1 si forzamos integridad por minimización de costos; sin embargo, dado que maximizamos la disposici\'on, esta forma asegura coherencia). La segunda (o alternativamente \(y_{p,w} \le \sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t\in\mathcal{T}} x_{p,d,t}\)) impide que \(y_{p,w}=1\) si no hay asignaciones en ese fin de semana. (Si prefieres una sola forma compacta, usar
+\(y_{p,w} \le \sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t\in\mathcal{T}} x_{p,d,t}\)
+y
+\(\sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t\in\mathcal{T}} x_{p,d,t} \le M\, y_{p,w}\)
+con \(M=2\) o un M grande también es común.)
+
+% No 3 fines de semana consecutivos
+\paragraph{5. No se permiten tres fines de semana consecutivos trabajados por la misma persona:}
+\[
+\forall p\in\mathcal{P},\ \forall w\in\{1,\dots,W-2\}:\qquad
+\sum_{k=0}^{2} y_{p,w+k} \;\le\; 2.
+\tag{R5}
+\]
+
+\paragraph{6. Dominios de las variables:}
+\[
+\forall p,d,t:\quad x_{p,d,t}\in\{0,1\},\qquad
+\forall p,w:\quad y_{p,w}\in\{0,1\}.
+\tag{R6}
+\]
+
+\subsection*{Observaciones adicionales y variantes}
+\begin{itemize}
+  \item Si se desea evitar sobredotación (asignar más personal del estrictamente necesario), se puede reemplazar la restricción (R1) por igualdad
+  \(\sum_{p} x_{p,d,t} = \text{dem}_{d,t}\) o a\~nadir un parámetro \(\text{cap}_{d,t}\) y forzar \(\text{dem}_{d,t} \le \sum_{p} x_{p,d,t} \le \text{cap}_{d,t}\).
+  \item La vinculación de \(y_{p,w}\) con los turnos de sábado/domingo puede escribirse con una sola pareja de desigualdades compactas:
+  \[
+  y_{p,w} \le \sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t} x_{p,d,t}, \qquad
+  \sum_{d\in\mathcal{D}_{\text{wk}}(w)}\sum_{t} x_{p,d,t} \le M\, y_{p,w},
+  \]
+  con \(M\) un entero mayor o igual al número máximo de turnos que un trabajador puede cubrir en el fin de semana (ej. \(M=4\) si se aceptan hasta 2 turnos por día y hay 2 días = 4).
+  \item Si se requiere modelar preferencia por balance (p. ej. que nadie exceda mucho las horas totales), se pueden agregar restricciones de carga total por persona:
+  \(\sum_{d,t} x_{p,d,t} \le U_p\) y \(\ge L_p\).
+\end{itemize}
+
+\subsection*{Breve descripción (resumen)}
+\begin{itemize}
+  \item \textbf{Función objetivo:} maximizar la suma de puntajes de disposición \(s_{p,d,t}\) sobre las asignaciones realizadas, favoreciendo así que las personas sean asignadas a los días/turnos donde están más dispuestas.
+  \item \textbf{R1 (Cobertura):} asegura que en cada día y turno se cubre la demanda proyectada.
+  \item \textbf{R2 (Máximo 2 turnos/día):} evita que un trabajador haga más de dos turnos en un mismo día.
+  \item \textbf{R3 (Descanso noche$\rightarrow$mañana):} prohíbe asignar a la misma persona la noche de un día y la mañana del siguiente para reducir fatiga.
+  \item \textbf{R4 (Fin de semana trabajado):} introduce la variable binaria \(y_{p,w}\) que indica si la persona trabaja el fin de semana de la semana \(w\), y la vincula con las asignaciones de sábado y domingo.
+  \item \textbf{R5 (No 3 fines de semana consecutivos):} impide que una misma persona trabaje tres fines de semana seguidos (ventana deslizante sobre semanas).
+\end{itemize}
+
+
+\end{document}
