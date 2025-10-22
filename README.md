@@ -5,16 +5,16 @@
 
 ```
 Proyecto_Optimizaci-n/
-├── README.md                    # Resumen general de la entrega
-├── main.tex                     # Pregunta 1: Formulación matemática
-├── generador_instancias.py      # Pregunta 2: Generador en Python  
-├── supuestos_generador.md       # Pregunta 2: Explicación de supuestos
-├── instancia_ejemplo.json       # Ejemplo de instancia generada
-├── instancia_ejemplo.dzn        # Datos para MiniZinc
-└── Entrega_1_Proyecto_INF292.pdf # PDF compilado del modelo
+├── README.md                           # Resumen general de la entrega
+├── main.tex                            # Item 1: Formulación matemática
+├── Generador_1_Grupo25_OPTI_SJ.py      # Item 2: Generador en Python  
+├── supuestos_generador.md              # Item 2: Explicación de supuestos
+├── instancia_ejemplo.json              # Ejemplo de instancia generada
+├── instancia_ejemplo.dzn               # Ejemplo de instancia generada en MiniZinc
+└── Modelo_1_Grupo25_OPTI_SJ.pdf        # PDF del modelo matemático
 ```
 
-### Pregunta 1: Formulación del Modelo Matemático ✓
+### Item 1: Formulación del Modelo Matemático ✓
 
 La formulación matemática completa está documentada en `main.tex` e incluye:
 
@@ -29,7 +29,7 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
   - R4: Definición de trabajo en fin de semana
   - R5: No más de 2 fines de semana de cada 3 consecutivos
 
-### Pregunta 2: Generador de Instancias ✓
+### Item 2: Generador de Instancias ✓
 
 **Archivos entregados:**
 1. `generador_instancias.py` - Script principal en Python
@@ -62,10 +62,10 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 **Uso del generador:**
 ```bash
 # Generar todas las 15 instancias según especificaciones del profesor
-python generador_instancias.py --semilla 42
+python Generador_1_Grupo25_OPTI_SJ.py --semilla 42
 
 # Generar en directorio personalizado
-python generador_instancias.py --semilla 42 --directorio mis_instancias
+python Generador_1_Grupo25_OPTI_SJ.py --semilla 42 --directorio mis_instancias
 
 # Genera automáticamente:
 # - 5 instancias pequeñas (5-15 trabajadores, 5-7 días)
@@ -75,7 +75,7 @@ python generador_instancias.py --semilla 42 --directorio mis_instancias
 # - Resumen estadístico en markdown
 ```
 
-**📋 Nota para el profesor:**
+**📋 Nota para el ayudante corrector:**
 > Las instancias NO están pre-generadas. Ejecute el comando anterior para crear las 15 instancias según sus especificaciones. Esto garantiza que puede verificar la generación desde cero.
 
 **Especificaciones técnicas:**
@@ -106,21 +106,3 @@ python generador_instancias.py --semilla 42 --directorio mis_instancias
 - **Regeneración**: Con la misma semilla obtienes exactamente los mismos números
 - **Flexibilidad**: Puedes generar solo en memoria (sin archivos) o guardar para análisis
 
-## 📋 Checklist de Entrega
-
-### ✅ Pregunta 1: Formulación Matemática
-- **Archivo**: `main.tex`
-- **Contenido**: Modelo completo con conjuntos, parámetros, variables, función objetivo y restricciones
-- **Estado**: Completado
-
-### ✅ Pregunta 2: Generador de Instancias  
-- **Archivo principal**: `generador_instancias.py`
-- **Documentación**: `supuestos_generador.md`
-- **Ejemplo funcional**: `instancia_ejemplo.json` + `instancia_ejemplo.dzn`
-- **Replicabilidad**: Semillas implementadas y documentadas
-- **Estado**: Completado
-
-### Próximos pasos:
-- Implementar el modelo en MiniZinc
-- Resolver instancias generadas
-- Analizar resultados y sensibilidad
