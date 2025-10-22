@@ -32,7 +32,7 @@ La formulación matemática completa está documentada en `main.tex` e incluye:
 ### Item 2: Generador de Instancias ✓
 
 **Archivos entregados:**
-1. `generador_instancias.py` - Script principal en Python
+1. `Generador_1_Grupo25_OPTI_SJ.py` - Script principal en Python
 2. `supuestos_generador.md` - Documentación detallada de supuestos
 3. `instancia_ejemplo.json` - Instancia de ejemplo generada (original)
 4. `instancia_ejemplo.dzn` - Datos para MiniZinc (original)
@@ -105,4 +105,3 @@ python Generador_1_Grupo25_OPTI_SJ.py --semilla 42 --directorio mis_instancias
 - **DZN**: Mismos datos en formato MiniZinc (para resolver el problema)
 - **Regeneración**: Con la misma semilla obtienes exactamente los mismos números
 - **Flexibilidad**: Puedes generar solo en memoria (sin archivos) o guardar para análisis
-
