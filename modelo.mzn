@@ -72,10 +72,16 @@ else
   true
 endif;
 
+function set of int: dias_finde_semana(int: semana) = 
+  let {
+    int: inicio_semana = (semana - 1) * 7 + 1,
+    int: sabado = inicio_semana + 5,
+    int: domingo = inicio_semana + 6
+  } in
+  {d | d in {sabado, domingo} where d <= horizonte_dias};
+
 constraint forall(p in PERSONAS, w in SEMANAS)(
-  turnos_finde[p,w] =
-    (if w*7-1 <= horizonte_dias then turnos_dia[p,w*7-1] else 0 endif) +
-    (if w*7 <= horizonte_dias then turnos_dia[p,w*7] else 0 endif)
+  y[p,w] = bool2int(sum(d in dias_finde_semana(w), t in TURNOS)(x[p,d,t]) > 0)
 );
 
 constraint if num_semanas >= 3 then
