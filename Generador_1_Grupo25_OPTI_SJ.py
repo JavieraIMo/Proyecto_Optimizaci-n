@@ -109,26 +109,19 @@ class GeneradorInstanciasProfesor:
 
     def generar_disposicion_uniforme(self, num_trabajadores, num_dias, demanda, turnos):
         """
-        Genera puntajes de disposición con distribución Uniforme U(0,10).
-        Justificación: Distribución uniforme asegura que todos los
-        niveles de disposición (0 a 10) tengan igual probabilidad.
+        Genera puntajes de disposición con distribución Uniforme U(0,10),
+        SIN asegurar factibilidad.
+        
+        Justificación:
+        - Se permite que haya días/turnos con disposición insuficiente.
+        - Esto genera tanto instancias factibles como infactibles,
+          útiles para análisis de desempeño y robustez del modelo.
         """
         puntajes = {}
         for d in range(1, num_dias + 1):
             for t in turnos:
-                personas_disp = []
                 for p in range(1, num_trabajadores + 1):
-                    puntaje = random.randint(0, 10)
-                    puntajes[(p, d, t)] = puntaje
-                    if puntaje > 0:
-                        personas_disp.append(p)
-                # Si la suma de personas con disposición positiva es menor que la demanda, ajustar
-                if len(personas_disp) < demanda[(d, t)]:
-                    faltan = demanda[(d, t)] - len(personas_disp)
-                    candidatos = [p for p in range(1, num_trabajadores + 1) if puntajes[(p, d, t)] == 0]
-                    random.shuffle(candidatos)
-                    for p in candidatos[:faltan]:
-                        puntajes[(p, d, t)] = random.randint(1, 3)  # Asignar disposición baja para cumplir demanda
+                    puntajes[(p, d, t)] = random.randint(0, 10)
         return puntajes
 
     def generar_instancia_tamaño(self, tamaño, numero_instancia):

@@ -132,6 +132,16 @@ Si trabajadores_disponibles < demanda[d,t]:
 
 **Justificación:** Permite evaluar calidad de soluciones sin infactibilidades estructurales.
 
+### Cambios para Entrega 2
+
+A partir de la segunda entrega, el generador **ya no garantiza factibilidad**. Ahora:
+- Las disposiciones se generan con distribución Uniforme U(0,10) sin corrección.
+- Puede haber días/turnos con menos trabajadores dispuestos que la demanda (instancias infactibles).
+- Esto permite analizar el desempeño y robustez del modelo ante casos factibles e infactibles.
+- La demanda sigue siendo generada con distribución Normal escalada según el tamaño.
+
+**El resto de la estructura y formatos se mantiene igual.**
+
 ### Uso del Generador
 
 #### Instalación de dependencias
