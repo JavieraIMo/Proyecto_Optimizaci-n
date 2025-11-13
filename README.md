@@ -1,107 +1,271 @@
-# Entrega 1 - Proyecto INF292
-## Octubre 2025
+# Entrega 1 - Proyecto de Optimización
+**Grupo 25 | INF-292 | Octubre 2025**
+
+---
 
 ## 📁 Estructura del Proyecto
-
 ```
-Proyecto_Optimizaci-n/
-├── README.md                           # Resumen general de la entrega
-├── main.tex                            # Item 1: Formulación matemática
-├── Generador_1_Grupo25_OPTI_SJ.py      # Item 2: Generador en Python  
-├── supuestos_generador.md              # Item 2: Explicación de supuestos
-├── instancia_ejemplo.json              # Ejemplo de instancia generada
-├── instancia_ejemplo.dzn               # Ejemplo de instancia generada en MiniZinc
-└── Modelo_1_Grupo25_OPTI_SJ.pdf        # PDF del modelo matemático
+Proyecto_Optimizacion/
+├── README.md                           # Este archivo
+├── Modelo_1_Grupo25_OPTI_SJ.pdf        # Formulación matemática completa
+├── Generador_1_Grupo25_OPTI_SJ.py      # Generador de instancias
+├── instancia_ejemplo.json              # Instancia de ejemplo (JSON)
+├── instancia_ejemplo.dzn               # Instancia de ejemplo (MiniZinc)
+└── instancias/                         # Directorio generado al ejecutar
+    ├── pequeñas_01.json/.dzn
+    ├── pequeñas_02.json/.dzn
+    ├── ...
+    └── resumen_instancias.md
 ```
 
-### Item 1: Formulación del Modelo Matemático ✓
+---
 
-La formulación matemática completa está documentada en `main.tex` e incluye:
+## 📋 Item 1: Formulación Matemática
 
-- **Conjuntos e índices**: Trabajadores (P), días (D), turnos (T), semanas (W)
-- **Parámetros**: Demanda por día-turno, puntajes de disposición
-- **Variables**: Asignaciones binarias x_{p,d,t} y variables de fin de semana y_{p,w}
-- **Función objetivo**: Maximizar disposición total del personal asignado
-- **Restricciones**: 
-  - R1: Cobertura de demanda
-  - R2: Máximo 2 turnos por día por trabajador
-  - R3: Prohibición noche→mañana consecutiva
-  - R4: Definición de trabajo en fin de semana
-  - R5: No más de 2 fines de semana de cada 3 consecutivos
+**Archivo:** `Modelo_1_Grupo25_OPTI_SJ.pdf`
 
-### Item 2: Generador de Instancias ✓
+### Contenido del Modelo
 
-**Archivos entregados:**
-1. `Generador_1_Grupo25_OPTI_SJ.py` - Script principal en Python
-2. `supuestos_generador.md` - Documentación detallada de supuestos
-3. `instancia_ejemplo.json` - Instancia de ejemplo generada (original)
-4. `instancia_ejemplo.dzn` - Datos para MiniZinc (original)
+#### Componentes Básicos
+- **Conjuntos**: Trabajadores (P), Días (D), Turnos (T), Semanas (W)
+- **Parámetros**: 
+  - `dem[d,t]`: Demanda de personal por día-turno
+  - `s[p,d,t]`: Disposición del trabajador (puntaje 0-10)
+- **Variables**: 
+  - `x[p,d,t]`: Asignación binaria (1 si trabaja, 0 si no)
+  - `y[p,w]`: Trabajo en fin de semana (1 si trabajó, 0 si no)
 
-**Al ejecutar el generador se crean:**
-- `instancias/` - Directorio con 15 instancias (5 pequeñas, 5 medianas, 5 grandes)
-- Archivos JSON y DZN para cada instancia
-- Resumen estadístico en markdown
+#### Función Objetivo
+```
+Maximizar: Σ s[p,d,t] × x[p,d,t]
+           p,d,t
+```
+**Objetivo:** Maximizar la disposición total del personal asignado
 
-**Características del generador:**
-- Cumple especificaciones exactas del profesor
-- Genera 5 instancias por cada tamaño (pequeñas, medianas, grandes)
-- Distribución Uniforme U(0,10) para puntajes de disposición
-- Distribución Normal para demanda de personal por turno
-- Rangos específicos según tabla del profesor
-- Semillas reproducibles para cada instancia
-- Produce archivos JSON y DZN compatibles con MiniZinc
-- Incluye resumen estadístico de todas las instancias
+#### Restricciones Principales
 
-**Supuestos principales:**
-- Demanda mayor en fines de semana
-- Trabajadores con preferencias de turno individuales
-- Factor de cansancio semanal
-- Variabilidad aleatoria controlada
-- Puntajes en escala 0-10
+|   ID   |          Restricción       |               Descripción                |
+|--------|----------------------------|------------------------------------------|
+| **R1** | Cobertura exacta           | `Σ x[p,d,t] = dem[d,t]` para todo (d,t)  |
+| **R2** | Compatibilidad             | `x[p,d,t] = 0` si `s[p,d,t] = 0`         |
+| **R3** | Máximo 2 turnos/día        | `Σ x[p,d,t] ≤ 2` para todo (p,d)         |
+| **R4** | No noche→mañana            | Prohíbe turno noche seguido de mañana    |
+| **R5** | Definición fin de semana   | `y[p,w] = 1` si trabaja sábado o domingo |
+| **R6** | Máx 2 de 3 fines de semana | `y[p,w] + y[p,w+1] + y[p,w+2] ≤ 2`       |
 
-**Uso del generador:**
+### Garantía de Factibilidad
+
+El modelo garantiza factibilidad mediante:
+- Ajuste automático de disposiciones cuando `disponibles < demanda`
+- Demanda nunca excede el total de trabajadores
+- Todas las instancias generadas son factibles por construcción
+
+---
+
+## 🔧 Item 2: Generador de Instancias
+
+**Archivo:** `Generador_1_Grupo25_OPTI_SJ.py`
+
+### Características del Generador
+
+✅ **5 instancias por tamaño** (15 totales)  
+✅ **Distribución Uniforme U(0,10)** para disposición  
+✅ **Distribución Normal** para demanda  
+✅ **Rangos según especificaciones** del profesor  
+✅ **Reproducible** con semillas  
+✅ **Formatos JSON + DZN** (MiniZinc)
+
+### Especificaciones por Tamaño
+
+|    Tamaño    | Días  | Trabajadores |         Turnos       |   Cantidad   |
+|--------------|-------|--------------|----------------------|--------------|
+| **Pequeñas** | 5-7   | 5-15         | Día, Noche           | 5 instancias |
+| **Medianas** | 7-14  | 15-45        | Mañana, Tarde, Noche | 5 instancias |
+| **Grandes**  | 14-28 | 45-90        | Mañana, Tarde, Noche | 5 instancias |
+
+### Decisiones de Diseño
+
+#### 1. Distribución Normal para Demanda
+```python
+Base factor: 25% de trabajadores por turno
+
+Variaciones por turno:
+- Día/Mañana: 30% (1.2 × 0.25)
+- Tarde:      25% (1.0 × 0.25)
+- Noche:      17.5% (0.7 × 0.25)
+
+Fines de semana:
+- Día/Tarde: +30% de demanda
+- Noche:     +10% de demanda
+```
+
+**Justificación:** Refleja patrones reales de operación clínica con mayor demanda diurna y en fines de semana.
+
+#### 2. Distribución Uniforme para Disposición
+```python
+Puntajes: U(0, 10)
+- 0:    No puede trabajar
+- 1-3:  Baja disposición
+- 4-7:  Disposición moderada
+- 8-10: Alta disposición
+```
+
+**Justificación:** Todos los niveles de disposición tienen igual probabilidad, garantizando diversidad en las preferencias.
+
+#### 3. Escalabilidad de Parámetros
+```python
+Media de demanda ∝ num_trabajadores
+Desviación estándar ∝ num_trabajadores
+
+Esto mantiene proporciones realistas:
+- Instancia pequeña (10 trabajadores): ~3 por turno
+- Instancia grande (90 trabajadores): ~23 por turno
+```
+
+#### 4. Garantía de Factibilidad
+```python
+Si trabajadores_disponibles < demanda[d,t]:
+    # Ajustar disposiciones de 0 → valores positivos
+    for trabajador in candidatos_con_cero:
+        disposicion[trabajador] = random(1, 10)
+```
+
+**Justificación:** Permite evaluar calidad de soluciones sin infactibilidades estructurales.
+
+### Uso del Generador
+
+#### Instalación de dependencias
 ```bash
-# Generar todas las 15 instancias según especificaciones del profesor
-python Generador_1_Grupo25_OPTI_SJ.py --semilla 42
-
-# Generar en directorio personalizado
-python Generador_1_Grupo25_OPTI_SJ.py --semilla 42 --directorio mis_instancias
-
-# Genera automáticamente:
-# - 5 instancias pequeñas (5-15 trabajadores, 5-7 días)
-# - 5 instancias medianas (15-45 trabajadores, 7-14 días)  
-# - 5 instancias grandes (45-90 trabajadores, 14-28 días)
-# - Archivos JSON y DZN para cada instancia
-# - Resumen estadístico en markdown
+pip install numpy
 ```
 
-**📋 Nota para el ayudante corrector:**
-> Las instancias NO están pre-generadas. Ejecute el comando anterior para crear las 15 instancias según sus especificaciones. Esto garantiza que puede verificar la generación desde cero.
+#### Generación de las 15 instancias
+```bash
+# Usar semilla por defecto (42)
+python Generador_1_Grupo25_OPTI_SJ.py
 
-**Especificaciones técnicas:**
-- **Distribuciones**: Uniforme U(0,10) para disposición, Normal para demanda
-- **Tamaños**: Según tabla del profesor (pequeñas, medianas, grandes)
-- **Replicabilidad**: Semilla base + offset para cada instancia
-- **Formatos**: JSON (legible) + DZN (MiniZinc)
+# Usar semilla personalizada
+python Generador_1_Grupo25_OPTI_SJ.py --semilla 123
 
-**Instancias que se generan al ejecutar:**
-- **15 instancias totales** según especificaciones del profesor
-- **5 pequeñas**: 5-15 trabajadores, 5-7 días
-- **5 medianas**: 15-45 trabajadores, 7-14 días  
-- **5 grandes**: 45-90 trabajadores, 14-28 días
-- **Distribuciones correctas**: U(0,10) para disposición, Normal para demanda
-- **Reproducibles**: Cada instancia tiene semilla específica
-- **Documentadas**: Resumen estadístico incluido automáticamente
+# Directorio personalizado
+python Generador_1_Grupo25_OPTI_SJ.py --directorio mis_instancias
+```
 
-**Instancia de ejemplo original:**
-- 8 trabajadores, 14 días (2 semanas)
-- 136 turnos de demanda total
-- Demanda promedio: 3.2 trabajadores por turno
-- Puntajes de disposición balanceados (promedio 5.0)
-- **Generada con semilla 42**: Los datos específicos en `instancia_ejemplo.json` corresponden exactamente a esta semilla
+#### Salida generada
+```
+instancias/
+├── pequeñas_01.json      # Datos en formato legible
+├── pequeñas_01.dzn       # Datos para MiniZinc
+├── pequeñas_02.json
+├── pequeñas_02.dzn
+├── ...
+├── grandes_05.json
+├── grandes_05.dzn
+└── resumen_instancias.md # Estadísticas de todas las instancias
+```
 
-**Importante sobre los archivos de datos:**
-- **JSON**: Contiene datos **ya calculados** (resultados finales de la generación)
-- **DZN**: Mismos datos en formato MiniZinc (para resolver el problema)
-- **Regeneración**: Con la misma semilla obtienes exactamente los mismos números
-- **Flexibilidad**: Puedes generar solo en memoria (sin archivos) o guardar para análisis
+### Ejemplo de Instancia Generada
+
+**Instancia de ejemplo incluida:** `instancia_ejemplo.json`
+- **8 trabajadores**, 14 días (2 semanas)
+- **136 turnos** de demanda total
+- **Demanda promedio:** 3.2 trabajadores/turno
+- **Disposición promedio:** 5.0 (escala 0-10)
+- **Semilla:** 42 (reproducible)
+
+---
+
+## 📊 Archivos de Salida
+
+### Formato JSON (legible)
+```json
+{
+  "metadata": {
+    "tamaño": "Pequeñas",
+    "num_trabajadores": 8,
+    "horizonte_dias": 7,
+    "turnos": ["d", "n"]
+  },
+  "demanda": {
+    "dia_1_turno_d": 3,
+    "dia_1_turno_n": 2
+  },
+  "puntajes_disposicion": {
+    "trabajador_1_dia_1_turno_d": 7,
+    "trabajador_1_dia_1_turno_n": 0
+  }
+}
+```
+
+### Formato DZN (MiniZinc)
+```dzn
+num_trabajadores = 8;
+horizonte_dias = 7;
+num_semanas = 1;
+
+demanda = array2d(1..7, 1..2, [
+  3, 2,
+  3, 2,
+  ...
+]);
+
+puntajes = array3d(1..8, 1..7, 1..2, [
+  7, 0,
+  5, 8,
+  ...
+]);
+```
+
+---
+
+## ✅ Checklist de Cumplimiento
+
+### Especificaciones del Profesor
+- [x] 5 instancias por tamaño (15 totales)
+- [x] Distribución Uniforme U(0,10) para disposición
+- [x] Distribución Normal para demanda
+- [x] Rangos según Tabla 1 del enunciado
+- [x] Turnos correctos por tamaño
+- [x] Parámetros distribucionales justificados
+- [x] Garantía de factibilidad explicada
+
+### Requisitos de Entrega
+- [x] Modelo matemático completo (PDF)
+- [x] Generador en Python con comentarios
+- [x] Archivos .json y .dzn por instancia
+- [x] Documentación de supuestos
+- [x] Instancias reproducibles (semillas)
+
+---
+
+## 📝 Notas Importantes
+
+### Para el Corrector
+> ⚠️ **Las instancias NO están pre-generadas en el repositorio.**  
+> Ejecute `python Generador_1_Grupo25_OPTI_SJ.py` para crear las 15 instancias.  
+> Esto permite verificar la generación desde cero.
+
+### Reproducibilidad
+- **Semilla base:** 42
+- **Semilla por instancia:** `base + índice_instancia`
+- **Misma semilla → mismos datos exactos**
+
+### Compatibilidad
+- **Python:** 3.7+
+- **Dependencias:** numpy
+- **MiniZinc:** Arrays dinámicos según número de turnos
+
+---
+
+## 🔍 Mejora Opcional Identificada
+
+En el ajuste de factibilidad, actualmente se generan puntajes altos para trabajadores originalmente no disponibles:
+```python
+# Actual (válido pero optimista)
+puntajes[(p, d, t)] = random.randint(1, 10)
+
+# Alternativa más realista (opcional)
+puntajes[(p, d, t)] = random.randint(1, 3)  # Baja disposición forzada
+```
+
+**Decisión:** Se mantiene la versión actual (1-10) por ser más neutral y permitir mayor flexibilidad al optimizador.

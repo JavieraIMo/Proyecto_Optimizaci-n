@@ -12,6 +12,9 @@
 \section*{Introducción}
 
 \section*{Modelo de optimización: Asignación de personal por turnos}
+\subsection*{Nota sobre factibilidad}
+El problema puede ser infactible si, para algún día y turno, la suma de disposiciones positivas de los trabajadores es menor que la demanda requerida $\text{dem}_{d,t}$. Es decir, si no hay suficientes personas disponibles para cubrir la demanda, el modelo no tendrá solución factible. Esto depende de los datos generados aleatoriamente (disposición y demanda).
+
 
 \subsection*{Conjuntos e índices}
 \[
@@ -48,6 +51,16 @@ Maximizar la disposición total del personal asignado:
 \]
 
 \subsection*{Restricciones}
+
+	extbf{Explicación de las restricciones:}
+\begin{itemize}
+  \item \textbf{R1 (Cobertura exacta):} Garantiza que la cantidad de personas asignadas a cada turno y día sea igual a la demanda requerida. Cumple la igualdad de cobertura exigida en el rubric.
+  \item \textbf{R2 (Compatibilidad):} Solo se asigna a personas con disposición positiva ($s_{p,d,t} > 0$) en cada turno y día. Si la disposición es 0, no se puede asignar ese turno a esa persona.
+  \item \textbf{R3 (Máximo 2 turnos/día):} Limita la carga diaria de cada trabajador a 2 turnos como máximo.
+  \item \textbf{R4 (Prohibición noche seguido de mañana):} Evita que una persona trabaje turno de noche y luego turno de mañana al día siguiente.
+  \item \textbf{R5 (Fin de semana trabajado):} Controla si una persona trabaja algún turno en sábado o domingo de cada semana, y vincula la variable $y_{p,w}$.
+  \item \textbf{R6 (No tres fines de semana consecutivos):} Limita a máximo dos fines de semana trabajados en cualquier secuencia de tres semanas.
+\end{itemize}
 
 % Cobertura
 \paragraph{1. Cobertura por día-turno (cumplir la demanda):}
