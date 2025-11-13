@@ -1,0 +1,815 @@
+
+￼
+Running modelo.mzn, pequeñas_01.dzn
+2h 35m 4s
+
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 118 / 173 ( 68%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·· ( 0) | ·N ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | D· ( 1) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | D· ( 8) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  18
+P6:  1 turnos | 1 findes | Score:  10
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 120 / 173 ( 69%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | D· ( 1) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | D· ( 8) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  4 turnos | 1 findes | Score:  17
+P5:  1 turnos | 1 findes | Score:  10
+P6:  1 turnos | 1 findes | Score:  10
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 121 / 173 ( 69%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·· ( 0) | D· ( 4) | D· ( 3) | ·N ( 9) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | D· ( 1) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | DN (11) | ·· ( 0) | D· ( 8) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  4 turnos | 1 findes | Score:  22
+P5:  1 turnos | 1 findes | Score:  10
+P6:  1 turnos | 1 findes | Score:  10
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 125 / 173 ( 72%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·· ( 0) | ·N ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | D· ( 1) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | D· ( 6) | ·· ( 0) | D· ( 8) | ·· ( 0) | ·· ( 0) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  2 turnos | 1 findes | Score:   3
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  20
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 126 / 173 ( 72%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | D· ( 1) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  13
+P5:  2 turnos | 1 findes | Score:  20
+P6:  1 turnos | 1 findes | Score:  10
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 130 / 173 ( 75%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 131 / 173 ( 75%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  33
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  20
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 132 / 173 ( 76%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  31
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 134 / 173 ( 77%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | D· ( 3) | ·N (10) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  31
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  20
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 137 / 173 ( 79%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·N ( 5) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  33
+P2:  5 turnos | 1 findes | Score:  17
+P3:  5 turnos | 1 findes | Score:  36
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 139 / 173 ( 80%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | D· ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | D· ( 1) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  5 turnos | 1 findes | Score:  17
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  2 turnos | 1 findes | Score:  20
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 140 / 173 ( 80%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  31
+P2:  4 turnos | 1 findes | Score:  16
+P3:  3 turnos | 1 findes | Score:  24
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  25
+P6:  3 turnos | 1 findes | Score:  29
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 141 / 173 ( 81%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  25
+P3:  5 turnos | 1 findes | Score:  36
+P4:  2 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 142 / 173 ( 82%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | D· ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· (10) | DN (19) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  4 turnos | 1 findes | Score:  16
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  29
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 143 / 173 ( 82%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | D· ( 6) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  5 turnos | 1 findes | Score:  25
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  25
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 144 / 173 ( 83%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  4 turnos | 1 findes | Score:  16
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  25
+P6:  3 turnos | 1 findes | Score:  29
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 145 / 173 ( 83%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | D· ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  16
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  25
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 146 / 173 ( 84%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  16
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  25
+P6:  3 turnos | 1 findes | Score:  29
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 147 / 173 ( 84%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | D· ( 3) | ·N ( 5) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  25
+P2:  4 turnos | 1 findes | Score:  22
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 148 / 173 ( 85%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 149 / 173 ( 86%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  29
+P2:  4 turnos | 1 findes | Score:  24
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  28
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 150 / 173 ( 86%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | D· ( 6) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  4 turnos | 1 findes | Score:  24
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 151 / 173 ( 87%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  23
+P6:  3 turnos | 1 findes | Score:  28
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 152 / 173 ( 87%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N ( 2) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  15
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 153 / 173 ( 88%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | D· ( 6) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·· ( 0) | ·N ( 5) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  4 turnos | 1 findes | Score:  24
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  18
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 154 / 173 ( 89%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·· ( 0) | ·N ( 5) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  18
+P5:  3 turnos | 1 findes | Score:  23
+P6:  3 turnos | 1 findes | Score:  28
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 155 / 173 ( 89%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | D· ( 4) | ·· ( 0) | ·N ( 5) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  18
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 156 / 173 ( 90%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | D· ( 6) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 1 findes | Score:  34
+P2:  4 turnos | 1 findes | Score:  29
+P3:  3 turnos | 1 findes | Score:  25
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 157 / 173 ( 90%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | D· ( 5) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  29
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  23
+P6:  3 turnos | 1 findes | Score:  28
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 158 / 173 ( 91%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | D· ( 3) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  29
+P3:  4 turnos | 1 findes | Score:  33
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 159 / 173 ( 91%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | ·N ( 6) | D· ( 7) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | ·N ( 9) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | D· ( 5) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | D· ( 3) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | D· (10) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  4 turnos | 1 findes | Score:  28
+P2:  4 turnos | 1 findes | Score:  29
+P3:  4 turnos | 1 findes | Score:  35
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 0 findes | Score:  23
+
+Demanda total: 21 turnos
+----------
+==========
+Finished in 2h 35m 4s.
+
+// de hehco a los 15 minutos encontró el resultado óptimo pero el solver no sabía si era el mejor.
