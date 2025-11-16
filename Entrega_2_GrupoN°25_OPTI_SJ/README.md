@@ -1,64 +1,60 @@
-# Entrega 1 - Proyecto de Optimización
-**Grupo 25 | INF-292 | Octubre 2025**
+# Entrega 2 - Proyecto de Optimización
+**Grupo 25 | INF-292 | Noviembre 2025**
 
 ---
 
 ## 📁 Estructura del Proyecto
 ```
-Proyecto_Optimizacion/
-├── README.md                           # Este archivo
-├── Modelo_1_Grupo25_OPTI_SJ.pdf        # Formulación matemática completa
-├── Generador_1_Grupo25_OPTI_SJ.py      # Generador de instancias
+Entrega_2_GrupoN°25_OPTI/
+├── README.md                           # (ACTUALIZADO) Este archivo
+├── supuestos_generador.md              # (ACTUALIZADO)Supuestos y observaciones complementarias
+├── Modelo_1_Grupo25_OPTI_SJ.pdf        # (ACTUALIZADO)Formulación matemática completa
+├── Generador_1_Grupo25_OPTI_SJ.py      # (ACTUALIZADO)Generador de instancias
 ├── instancia_ejemplo.json              # Instancia de ejemplo (JSON)
 ├── instancia_ejemplo.dzn               # Instancia de ejemplo (MiniZinc)
+├── modelo.mzn                          # modelo para minizinc
 └── instancias/                         # Directorio generado al ejecutar
     ├── pequeñas_01.json/.dzn
     ├── pequeñas_02.json/.dzn
     ├── ...
     └── resumen_instancias.md
+
 ```
 
 ---
 
 ## 📋 Item 1: Formulación Matemática
 
-**Archivo:** `Modelo_1_Grupo25_OPTI_SJ.pdf`
+**Archivo:** `Entrega_2_proyecto_Grupo25_OPTI_SJ.pdf`
 
 ### Contenido del Modelo
 
 #### Componentes Básicos
 - **Conjuntos**: Trabajadores (P), Días (D), Turnos (T), Semanas (W)
 - **Parámetros**: 
-  - `dem[d,t]`: Demanda de personal por día-turno
-  - `s[p,d,t]`: Disposición del trabajador (puntaje 0-10)
+  - `demanda[d,t]`: Demanda de personal por día-turno
+  - `puntajes[p,d,t]`: Disposición del trabajador (puntaje 0-10)
 - **Variables**: 
   - `x[p,d,t]`: Asignación binaria (1 si trabaja, 0 si no)
   - `y[p,w]`: Trabajo en fin de semana (1 si trabajó, 0 si no)
 
 #### Función Objetivo
 ```
-Maximizar: Σ s[p,d,t] × x[p,d,t]
+Maximizar: Σ puntajes[p,d,t] × x[p,d,t]
            p,d,t
 ```
 **Objetivo:** Maximizar la disposición total del personal asignado
 
 #### Restricciones Principales
 
-|   ID   |          Restricción       |               Descripción                |
-|--------|----------------------------|------------------------------------------|
-| **R1** | Cobertura exacta           | `Σ x[p,d,t] = dem[d,t]` para todo (d,t)  |
-| **R2** | Compatibilidad             | `x[p,d,t] = 0` si `s[p,d,t] = 0`         |
-| **R3** | Máximo 2 turnos/día        | `Σ x[p,d,t] ≤ 2` para todo (p,d)         |
-| **R4** | No noche→mañana            | Prohíbe turno noche seguido de mañana    |
-| **R5** | Definición fin de semana   | `y[p,w] = 1` si trabaja sábado o domingo |
-| **R6** | Máx 2 de 3 fines de semana | `y[p,w] + y[p,w+1] + y[p,w+2] ≤ 2`       |
-
-### Garantía de Factibilidad
-
-El modelo garantiza factibilidad mediante:
-- Ajuste automático de disposiciones cuando `disponibles < demanda`
-- Demanda nunca excede el total de trabajadores
-- Todas las instancias generadas son factibles por construcción
+|   ID   |          Restricción       |               Descripción                  |
+|--------|----------------------------|--------------------------------------------|
+| **R1** | Cobertura exacta           | `Σ x[p,d,t] = demanda[d,t]` para todo (d,t)|
+| **R2** | Compatibilidad             | `x[p,d,t] = 0` si `puntajes[p,d,t] = 0`    |
+| **R3** | Máximo 2 turnos/día        | `Σ x[p,d,t] ≤ 2` para todo (p,d)           |
+| **R4** | No noche→mañana            | Prohíbe turno noche seguido de mañana      |
+| **R5** | Definición fin de semana   | `y[p,w] = 1` si trabaja sábado o domingo   |
+| **R6** | Máx 2 de 3 fines de semana | `y[p,w] + y[p,w+1] + y[p,w+2] ≤ 2`         |
 
 ---
 
@@ -66,14 +62,15 @@ El modelo garantiza factibilidad mediante:
 
 **Archivo:** `Generador_1_Grupo25_OPTI_SJ.py`
 
-### Características del Generador
+### Cambios para Entrega 2
 
-✅ **5 instancias por tamaño** (15 totales)  
-✅ **Distribución Uniforme U(0,10)** para disposición  
-✅ **Distribución Normal** para demanda  
-✅ **Rangos según especificaciones** del profesor  
-✅ **Reproducible** con semillas  
-✅ **Formatos JSON + DZN** (MiniZinc)
+- El generador **no asegura factibilidad**: la disposición se genera con U(0,10) completamente aleatoria, sin corrección.
+- Puede haber días/turnos con menos trabajadores dispuestos que la demanda (instancias infactibles).
+- Esto permite analizar el desempeño y robustez del modelo ante casos factibles e infactibles.
+- La demanda sigue siendo generada con distribución Normal escalada según el tamaño.
+- Se prioriza la diversidad y realismo de los datos generados.
+
+**El resto de la estructura y formatos se mantiene igual.**
 
 ### Especificaciones por Tamaño
 
@@ -103,44 +100,22 @@ Fines de semana:
 
 #### 2. Distribución Uniforme para Disposición
 ```python
-Puntajes: U(0, 10)
+Puntajes: U(0, 10) completamente aleatoria
 - 0:    No puede trabajar
 - 1-3:  Baja disposición
 - 4-7:  Disposición moderada
 - 8-10: Alta disposición
 ```
 
-**Justificación:** Todos los niveles de disposición tienen igual probabilidad, garantizando diversidad en las preferencias.
+**Justificación:** Todos los niveles de disposición tienen igual probabilidad, permitiendo diversidad y casos infactibles.
 
 #### 3. Escalabilidad de Parámetros
 ```python
 Media de demanda ∝ num_trabajadores
 Desviación estándar ∝ num_trabajadores
-
-Esto mantiene proporciones realistas:
-- Instancia pequeña (10 trabajadores): ~3 por turno
-- Instancia grande (90 trabajadores): ~23 por turno
 ```
 
-#### 4. Garantía de Factibilidad
-```python
-Si trabajadores_disponibles < demanda[d,t]:
-    # Ajustar disposiciones de 0 → valores positivos
-    for trabajador in candidatos_con_cero:
-        disposicion[trabajador] = random(1, 10)
-```
-
-**Justificación:** Permite evaluar calidad de soluciones sin infactibilidades estructurales.
-
-### Cambios para Entrega 2
-
-A partir de la segunda entrega, el generador **ya no garantiza factibilidad**. Ahora:
-- Las disposiciones se generan con distribución Uniforme U(0,10) sin corrección.
-- Puede haber días/turnos con menos trabajadores dispuestos que la demanda (instancias infactibles).
-- Esto permite analizar el desempeño y robustez del modelo ante casos factibles e infactibles.
-- La demanda sigue siendo generada con distribución Normal escalada según el tamaño.
-
-**El resto de la estructura y formatos se mantiene igual.**
+Esto mantiene proporciones realistas y diversidad en las instancias generadas.
 
 ### Uso del Generador
 
@@ -212,6 +187,7 @@ instancias/
 num_trabajadores = 8;
 horizonte_dias = 7;
 num_semanas = 1;
+TURNOS = 1..2;
 
 demanda = array2d(1..7, 1..2, [
   3, 2,
@@ -225,26 +201,6 @@ puntajes = array3d(1..8, 1..7, 1..2, [
   ...
 ]);
 ```
-
----
-
-## ✅ Checklist de Cumplimiento
-
-### Especificaciones del Profesor
-- [x] 5 instancias por tamaño (15 totales)
-- [x] Distribución Uniforme U(0,10) para disposición
-- [x] Distribución Normal para demanda
-- [x] Rangos según Tabla 1 del enunciado
-- [x] Turnos correctos por tamaño
-- [x] Parámetros distribucionales justificados
-- [x] Garantía de factibilidad explicada
-
-### Requisitos de Entrega
-- [x] Modelo matemático completo (PDF)
-- [x] Generador en Python con comentarios
-- [x] Archivos .json y .dzn por instancia
-- [x] Documentación de supuestos
-- [x] Instancias reproducibles (semillas)
 
 ---
 
@@ -267,15 +223,18 @@ puntajes = array3d(1..8, 1..7, 1..2, [
 
 ---
 
+## 📝 Nota sobre la extensión del informe
+
+> ⚠️ Debido a la cantidad y profundidad de información solicitada en el enunciado, **no fue posible reducir el informe PDF a 6 páginas incluyendo la portada**. El documento final tiene 8 páginas para cubrir todos los puntos requeridos (modelo, generador, análisis de factibilidad, ejemplos y supuestos).
+
+---
+
 ## 🔍 Mejora Opcional Identificada
 
-En el ajuste de factibilidad, actualmente se generan puntajes altos para trabajadores originalmente no disponibles:
-```python
-# Actual (válido pero optimista)
-puntajes[(p, d, t)] = random.randint(1, 10)
+En la entrega 2, el generador no ajusta disposiciones para asegurar factibilidad. Todas las disposiciones se generan aleatoriamente en U(0,10), permitiendo instancias infactibles y mayor diversidad para análisis.
 
-# Alternativa más realista (opcional)
-puntajes[(p, d, t)] = random.randint(1, 3)  # Baja disposición forzada
-```
+---
 
-**Decisión:** Se mantiene la versión actual (1-10) por ser más neutral y permitir mayor flexibilidad al optimizador.
+## 📄 Información complementaria
+
+> Para evitar extender el largo del informe principal, información adicional y observaciones empíricas sobre la infactibilidad, el comportamiento de las instancias y detalles de ejecución se encuentran documentadas en `supuestos_generador.md`. Se recomienda revisar ese archivo para un análisis más profundo y ejemplos prácticos.
