@@ -238,3 +238,13 @@ En la entrega 2, el generador no ajusta disposiciones para asegurar factibilidad
 ## 📄 Información complementaria
 
 > Para evitar extender el largo del informe principal, información adicional y observaciones empíricas sobre la infactibilidad, el comportamiento de las instancias y detalles de ejecución se encuentran documentadas en `supuestos_generador.md`. Se recomienda revisar ese archivo para un análisis más profundo y ejemplos prácticos.
+
+---
+
+## 📝 Nota sobre entrega de video y foro de consultas
+
+> No se realizó entrega de video junto con esta entrega, ya que **no estaba especificado en el documento oficial de entrega**. Si bien existe una pauta que menciona el video, el PDF que explica la entrega no lo especifica, por lo que se considera aparte de la entrega dos. Se entregará un link de YouTube cuando esté listo, durante la semana de presentaciones, en caso de optar por la modalidad no presencial.
+
+> Además, en el foro de consultas **no se respondieron las preguntas realizadas**, por lo que no se pudo aclarar información adicional sobre los requisitos de la entrega.
+
+> En caso de cualquier problema con descuento de nota por requisitos no explicitados formalmente, se conversará directamente con el profesor para aclarar la situación.
