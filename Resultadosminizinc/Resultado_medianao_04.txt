@@ -1,0 +1,120 @@
+Dataset: medianas_04.dzn
+Tiempo límite: 10.0 minutos
+Tiempo total ejecución: 600.27 segundos
+Soluciones solicitadas: 3
+Soluciones encontradas: 1
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+============================================================
+ESTADÍSTICAS DEL SOLVER:
+  % Generated FlatZinc statistics:
+  %%%mzn-stat: paths=0
+  %%%mzn-stat: flatBoolVars=84
+  %%%mzn-stat: flatIntVars=2292
+  %%%mzn-stat: flatIntConstraints=1917
+  %%%mzn-stat: evaluatedReifiedConstraints=84
+  %%%mzn-stat: method="maximize"
+  %%%mzn-stat: flatTime=0.443002
+  %%%mzn-stat-end
+  % Pruned 49980 learnt clauses
+  % Pruned 49976 learnt clauses
+  % Pruned 49980 learnt clauses
+  % Pruned 49975 learnt clauses
+  % Pruned 49969 learnt clauses
+  % Pruned 49958 learnt clauses
+  % Pruned 49968 learnt clauses
+  % Pruned 49972 learnt clauses
+  % Pruned 49966 learnt clauses
+  % Pruned 49968 learnt clauses
+  % Pruned 49964 learnt clauses
+  % Pruned 49964 learnt clauses
+  % Pruned 49973 learnt clauses
+  % Pruned 49972 learnt clauses
+  % Pruned 49967 learnt clauses
+  % Pruned 49967 learnt clauses
+  % Pruned 49969 learnt clauses
+  % Pruned 49969 learnt clauses
+  % Pruned 49966 learnt clauses
+  % Time limit exceeded!
+  %%%mzn-stat: nodes=11216865
+  %%%mzn-stat: failures=1020112
+  %%%mzn-stat: restarts=0
+  %%%mzn-stat: variables=17900
+  %%%mzn-stat: intVars=2293
+  %%%mzn-stat: boolVariables=15605
+  %%%mzn-stat: propagators=2541
+  %%%mzn-stat: propagations=221573036
+  %%%mzn-stat: peakDepth=415
+  %%%mzn-stat: nogoods=1020112
+  %%%mzn-stat: backjumps=10196364
+  %%%mzn-stat: peakMem=0.00
+  %%%mzn-stat: time=599.643
+  %%%mzn-stat: initTime=0.103
+  %%%mzn-stat: solveTime=599.540
+  %%%mzn-stat: objective=-1
+  %%%mzn-stat: optTime=0.000
+  %%%mzn-stat: baseMem=0.00
+  %%%mzn-stat: trailMem=0.08
+  %%%mzn-stat: randomSeed=1224426980
+  %%%mzn-stat-end
+  % time elapsed: 600.21 s
+  %%%mzn-stat-end
+----------------------------------------
+SALIDA COMPLETA:
+% Generated FlatZinc statistics:
+%%%mzn-stat: paths=0
+%%%mzn-stat: flatBoolVars=84
+%%%mzn-stat: flatIntVars=2292
+%%%mzn-stat: flatIntConstraints=1917
+%%%mzn-stat: evaluatedReifiedConstraints=84
+%%%mzn-stat: method="maximize"
+%%%mzn-stat: flatTime=0.443002
+%%%mzn-stat-end
+% Pruned 49980 learnt clauses
+% Pruned 49976 learnt clauses
+% Pruned 49980 learnt clauses
+% Pruned 49975 learnt clauses
+% Pruned 49969 learnt clauses
+% Pruned 49958 learnt clauses
+% Pruned 49968 learnt clauses
+% Pruned 49972 learnt clauses
+% Pruned 49966 learnt clauses
+% Pruned 49968 learnt clauses
+% Pruned 49964 learnt clauses
+% Pruned 49964 learnt clauses
+% Pruned 49973 learnt clauses
+% Pruned 49972 learnt clauses
+% Pruned 49967 learnt clauses
+% Pruned 49967 learnt clauses
+% Pruned 49969 learnt clauses
+% Pruned 49969 learnt clauses
+% Pruned 49966 learnt clauses
+% Time limit exceeded!
+%%%mzn-stat: nodes=11216865
+%%%mzn-stat: failures=1020112
+%%%mzn-stat: restarts=0
+%%%mzn-stat: variables=17900
+%%%mzn-stat: intVars=2293
+%%%mzn-stat: boolVariables=15605
+%%%mzn-stat: propagators=2541
+%%%mzn-stat: propagations=221573036
+%%%mzn-stat: peakDepth=415
+%%%mzn-stat: nogoods=1020112
+%%%mzn-stat: backjumps=10196364
+%%%mzn-stat: peakMem=0.00
+%%%mzn-stat: time=599.643
+%%%mzn-stat: initTime=0.103
+%%%mzn-stat: solveTime=599.540
+%%%mzn-stat: objective=-1
+%%%mzn-stat: optTime=0.000
+%%%mzn-stat: baseMem=0.00
+%%%mzn-stat: trailMem=0.08
+%%%mzn-stat: randomSeed=1224426980
+%%%mzn-stat-end
+=====UNKNOWN=====
+% time elapsed: 600.21 s
+%%%mzn-stat: nSolutions=0
+%%%mzn-stat-end
+
+[ERRORES]
+WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+% Warning: Unknown or not support variable selection annotation 'dom_w_deg'! Ignore variable selection annotation and replace it by 'input_order'.

@@ -1,0 +1,166 @@
+Dataset: pequeñas_04.dzn
+Tiempo límite: 5.0 minutos
+Tiempo total ejecución: 300.11 segundos
+Soluciones solicitadas: 3
+Soluciones encontradas: 1
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+============================================================
+ESTADÍSTICAS DEL SOLVER:
+  % Generated FlatZinc statistics:
+  %%%mzn-stat: paths=0
+  %%%mzn-stat: flatBoolVars=11
+  %%%mzn-stat: flatIntVars=129
+  %%%mzn-stat: flatIntConstraints=113
+  %%%mzn-stat: evaluatedReifiedConstraints=11
+  %%%mzn-stat: method="maximize"
+  %%%mzn-stat: flatTime=0.192569
+  %%%mzn-stat-end
+  % Pruned 49997 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49983 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49989 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49991 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49985 learnt clauses
+  % Pruned 49978 learnt clauses
+  % Pruned 49978 learnt clauses
+  % Pruned 49977 learnt clauses
+  % Pruned 49979 learnt clauses
+  % Pruned 49978 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49980 learnt clauses
+  % Pruned 49980 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49989 learnt clauses
+  % Pruned 49988 learnt clauses
+  % Pruned 49987 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49991 learnt clauses
+  % Pruned 49988 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49991 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49988 learnt clauses
+  % Pruned 49991 learnt clauses
+  % Pruned 49987 learnt clauses
+  % Time limit exceeded!
+  %%%mzn-stat: nodes=2330174
+  %%%mzn-stat: failures=2185499
+  %%%mzn-stat: restarts=0
+  %%%mzn-stat: variables=2067
+  %%%mzn-stat: intVars=130
+  %%%mzn-stat: boolVariables=1935
+  %%%mzn-stat: propagators=123
+  %%%mzn-stat: propagations=58171803
+  %%%mzn-stat: peakDepth=32
+  %%%mzn-stat: nogoods=2185499
+  %%%mzn-stat: backjumps=144656
+  %%%mzn-stat: peakMem=0.00
+  %%%mzn-stat: time=299.828
+  %%%mzn-stat: initTime=0.032
+  %%%mzn-stat: solveTime=299.796
+  %%%mzn-stat: objective=-1
+  %%%mzn-stat: optTime=0.000
+  %%%mzn-stat: baseMem=0.00
+  %%%mzn-stat: trailMem=0.00
+  %%%mzn-stat: randomSeed=521709616
+  %%%mzn-stat-end
+  % time elapsed: 300.08 s
+  %%%mzn-stat-end
+----------------------------------------
+SALIDA COMPLETA:
+% Generated FlatZinc statistics:
+%%%mzn-stat: paths=0
+%%%mzn-stat: flatBoolVars=11
+%%%mzn-stat: flatIntVars=129
+%%%mzn-stat: flatIntConstraints=113
+%%%mzn-stat: evaluatedReifiedConstraints=11
+%%%mzn-stat: method="maximize"
+%%%mzn-stat: flatTime=0.192569
+%%%mzn-stat-end
+% Pruned 49997 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49983 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49989 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49991 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49985 learnt clauses
+% Pruned 49978 learnt clauses
+% Pruned 49978 learnt clauses
+% Pruned 49977 learnt clauses
+% Pruned 49979 learnt clauses
+% Pruned 49978 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49980 learnt clauses
+% Pruned 49980 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49989 learnt clauses
+% Pruned 49988 learnt clauses
+% Pruned 49987 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49991 learnt clauses
+% Pruned 49988 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49991 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49988 learnt clauses
+% Pruned 49991 learnt clauses
+% Pruned 49987 learnt clauses
+% Time limit exceeded!
+%%%mzn-stat: nodes=2330174
+%%%mzn-stat: failures=2185499
+%%%mzn-stat: restarts=0
+%%%mzn-stat: variables=2067
+%%%mzn-stat: intVars=130
+%%%mzn-stat: boolVariables=1935
+%%%mzn-stat: propagators=123
+%%%mzn-stat: propagations=58171803
+%%%mzn-stat: peakDepth=32
+%%%mzn-stat: nogoods=2185499
+%%%mzn-stat: backjumps=144656
+%%%mzn-stat: peakMem=0.00
+%%%mzn-stat: time=299.828
+%%%mzn-stat: initTime=0.032
+%%%mzn-stat: solveTime=299.796
+%%%mzn-stat: objective=-1
+%%%mzn-stat: optTime=0.000
+%%%mzn-stat: baseMem=0.00
+%%%mzn-stat: trailMem=0.00
+%%%mzn-stat: randomSeed=521709616
+%%%mzn-stat-end
+=====UNKNOWN=====
+% time elapsed: 300.08 s
+%%%mzn-stat: nSolutions=0
+%%%mzn-stat-end
+
+[ERRORES]
+WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+% Warning: Unknown or not support variable selection annotation 'dom_w_deg'! Ignore variable selection annotation and replace it by 'input_order'.

@@ -1,0 +1,46 @@
+ANÁLISIS DE DATOS - PEQUEÑAS
+==================================================
+
+Dataset: pequeñas_01.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 30
+Tiempo primera solución: 298.33 segundos
+Tiempo total ejecución: 300.10 segundos
+Timeout: NO
+------------------------------
+Dataset: pequeñas_02.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 299.80 segundos
+Tiempo total ejecución: 300.09 segundos
+Timeout: NO
+------------------------------
+Dataset: pequeñas_03.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 299.80 segundos
+Tiempo total ejecución: 300.12 segundos
+Timeout: NO
+------------------------------
+Dataset: pequeñas_04.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 299.80 segundos
+Tiempo total ejecución: 300.11 segundos
+Timeout: NO
+------------------------------
+Dataset: pequeñas_05.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 299.78 segundos
+Tiempo total ejecución: 300.09 segundos
+Timeout: NO
+------------------------------
+
+RESUMEN ESTADÍSTICO:
+Total datasets: 5
+Total soluciones encontradas: 30
+Timeouts: 0
+Tiempo promedio primera solución: 299.50 segundos
+Tiempo máximo: 299.80 segundos
+Tiempo mínimo: 298.33 segundos

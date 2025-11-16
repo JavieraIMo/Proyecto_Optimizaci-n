@@ -1,0 +1,13 @@
+{
+  "timeouts_minutos": {
+    "pequeñas": 10,
+    "medianas": 20,
+    "grandes": 40
+  },
+  "soluciones_maximas": {
+    "pequeñas": 3,
+    "medianas": 3,
+    "grandes": 1
+  },
+  "solver": "chuffed"
+}

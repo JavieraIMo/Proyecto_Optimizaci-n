@@ -10,7 +10,7 @@
       "n"
     ],
     "semilla_base": 42,
-    "fecha_generacion": "2025-11-13T04:57:40.110999",
+    "fecha_generacion": "2025-11-16T10:21:20.223477",
     "distribucion_demanda": "Normal con parámetros por turno",
     "distribucion_disposicion": "Uniforme U(0,10)"
   },

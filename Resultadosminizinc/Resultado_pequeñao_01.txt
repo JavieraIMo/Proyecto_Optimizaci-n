@@ -1,0 +1,1191 @@
+Dataset: pequeñas_01.dzn
+Tiempo límite: 5.0 minutos
+Tiempo total ejecución: 300.10 segundos
+Soluciones solicitadas: 3
+Soluciones encontradas: 61
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+============================================================
+ESTADÍSTICAS DEL SOLVER:
+  % Generated FlatZinc statistics:
+  %%%mzn-stat: paths=0
+  %%%mzn-stat: flatBoolVars=6
+  %%%mzn-stat: flatIntVars=84
+  %%%mzn-stat: flatIntConstraints=80
+  %%%mzn-stat: evaluatedReifiedConstraints=6
+  %%%mzn-stat: method="maximize"
+  %%%mzn-stat: flatTime=1.66607
+  %%%mzn-stat-end
+  Puntaje total: 96 / 173 ( 55%)
+  % time elapsed: 1.72 s
+  Puntaje total: 102 / 173 ( 58%)
+  % time elapsed: 1.73 s
+  Puntaje total: 108 / 173 ( 62%)
+  % time elapsed: 1.73 s
+  Puntaje total: 111 / 173 ( 64%)
+  % time elapsed: 1.73 s
+  Puntaje total: 113 / 173 ( 65%)
+  % time elapsed: 1.73 s
+  Puntaje total: 118 / 173 ( 68%)
+  % time elapsed: 1.73 s
+  Puntaje total: 119 / 173 ( 68%)
+  % time elapsed: 1.73 s
+  Puntaje total: 121 / 173 ( 69%)
+  % time elapsed: 1.73 s
+  Puntaje total: 123 / 173 ( 71%)
+  % time elapsed: 1.73 s
+  Puntaje total: 125 / 173 ( 72%)
+  % time elapsed: 1.73 s
+  Puntaje total: 127 / 173 ( 73%)
+  % time elapsed: 1.73 s
+  Puntaje total: 128 / 173 ( 73%)
+  % time elapsed: 1.73 s
+  Puntaje total: 129 / 173 ( 74%)
+  % time elapsed: 1.73 s
+  Puntaje total: 133 / 173 ( 76%)
+  % time elapsed: 1.74 s
+  Puntaje total: 134 / 173 ( 77%)
+  % time elapsed: 1.76 s
+  Puntaje total: 135 / 173 ( 78%)
+  % time elapsed: 1.90 s
+  Puntaje total: 137 / 173 ( 79%)
+  % time elapsed: 1.90 s
+  Puntaje total: 138 / 173 ( 79%)
+  % time elapsed: 1.90 s
+  Puntaje total: 139 / 173 ( 80%)
+  % time elapsed: 1.90 s
+  Puntaje total: 142 / 173 ( 82%)
+  % time elapsed: 1.93 s
+  Puntaje total: 143 / 173 ( 82%)
+  % time elapsed: 1.93 s
+  Puntaje total: 144 / 173 ( 83%)
+  % time elapsed: 3.27 s
+  % Pruned 49999 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 50000 learnt clauses
+  % Pruned 49999 learnt clauses
+  Puntaje total: 145 / 173 ( 83%)
+  % time elapsed: 7.13 s
+  Puntaje total: 146 / 173 ( 84%)
+  % time elapsed: 7.14 s
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49997 learnt clauses
+  Puntaje total: 147 / 173 ( 84%)
+  % time elapsed: 18.01 s
+  % Pruned 49996 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 50000 learnt clauses
+  Puntaje total: 148 / 173 ( 85%)
+  % time elapsed: 29.20 s
+  % Pruned 49996 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49997 learnt clauses
+  Puntaje total: 149 / 173 ( 86%)
+  % time elapsed: 36.97 s
+  % Pruned 49996 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  Puntaje total: 150 / 173 ( 86%)
+  % time elapsed: 46.96 s
+  Puntaje total: 151 / 173 ( 87%)
+  % time elapsed: 47.39 s
+  % Pruned 49997 learnt clauses
+  Puntaje total: 152 / 173 ( 87%)
+  % time elapsed: 48.41 s
+  % Pruned 49996 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 50000 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49999 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49998 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49995 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49994 learnt clauses
+  % Pruned 49993 learnt clauses
+  % Pruned 49992 learnt clauses
+  % Pruned 49997 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Pruned 49996 learnt clauses
+  % Time limit exceeded!
+  %%%mzn-stat: nodes=6554262
+  %%%mzn-stat: failures=6115892
+  %%%mzn-stat: restarts=30
+  %%%mzn-stat: variables=1306
+  %%%mzn-stat: intVars=85
+  %%%mzn-stat: boolVariables=1219
+  %%%mzn-stat: propagators=96
+  %%%mzn-stat: propagations=130435635
+  %%%mzn-stat: peakDepth=22
+  %%%mzn-stat: nogoods=6115892
+  %%%mzn-stat: backjumps=437785
+  %%%mzn-stat: peakMem=0.00
+  %%%mzn-stat: time=298.329
+  %%%mzn-stat: initTime=0.003
+  %%%mzn-stat: solveTime=298.326
+  %%%mzn-stat: objective=152
+  %%%mzn-stat: optTime=46.690
+  %%%mzn-stat: baseMem=0.00
+  %%%mzn-stat: trailMem=0.00
+  %%%mzn-stat: randomSeed=1933904693
+  %%%mzn-stat-end
+  %%%mzn-stat-end
+----------------------------------------
+SALIDA COMPLETA:
+% Generated FlatZinc statistics:
+%%%mzn-stat: paths=0
+%%%mzn-stat: flatBoolVars=6
+%%%mzn-stat: flatIntVars=84
+%%%mzn-stat: flatIntConstraints=80
+%%%mzn-stat: evaluatedReifiedConstraints=6
+%%%mzn-stat: method="maximize"
+%%%mzn-stat: flatTime=1.66607
+%%%mzn-stat-end
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 96 / 173 ( 55%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | DN ( 8) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN ( 6) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  18
+P4:  5 turnos | 1 findes | Score:  18
+P5:  1 turnos | 1 findes | Score:  10
+P6:  0 turnos | 0 findes | Score:   0
+
+Demanda total: 21 turnos
+% time elapsed: 1.72 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 102 / 173 ( 58%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | DN ( 8) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 4) | DN (18) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  18
+P4:  4 turnos | 1 findes | Score:  16
+P5:  2 turnos | 1 findes | Score:  18
+P6:  0 turnos | 0 findes | Score:   0
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 108 / 173 ( 62%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | DN ( 8) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN (18) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  18
+P4:  3 turnos | 1 findes | Score:  12
+P5:  2 turnos | 1 findes | Score:  18
+P6:  1 turnos | 1 findes | Score:  10
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 111 / 173 ( 64%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | ·N ( 5) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN (18) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  18
+P4:  2 turnos | 1 findes | Score:   9
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 113 / 173 ( 65%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | DN ( 8) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN (18) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  18
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 118 / 173 ( 68%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 4) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN (18) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  27
+P4:  2 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 119 / 173 ( 68%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN ( 8) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | ·N ( 8) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  27
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 121 / 173 ( 69%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | DN (11) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN ( 8) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  27
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 123 / 173 ( 71%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | D· ( 1) | DN ( 8) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  25
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  20
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 125 / 173 ( 72%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | D· ( 4) | ·· ( 0) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | DN (18) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  34
+P4:  2 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 127 / 173 ( 73%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 4) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  34
+P4:  2 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 128 / 173 ( 73%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN ( 8) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  34
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 129 / 173 ( 74%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 4) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  36
+P4:  2 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.73 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 133 / 173 ( 76%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  41
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.74 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 134 / 173 ( 77%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | D· ( 1) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | D· (10) | ·N (10) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | DN (11) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  21
+P3:  5 turnos | 1 findes | Score:  39
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 0 findes | Score:  19
+
+Demanda total: 21 turnos
+% time elapsed: 1.76 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 135 / 173 ( 78%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | D· (10) | ·· ( 0) | ·N ( 8) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  37
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.90 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 137 / 173 ( 79%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | ·N (10) | ·· ( 0) | D· (10) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  37
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.90 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 138 / 173 ( 79%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·· ( 0) | DN ( 8) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  37
+P4:  2 turnos | 1 findes | Score:   8
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+% time elapsed: 1.90 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 139 / 173 ( 80%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | D· ( 3) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | D· ( 4) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  39
+P4:  2 turnos | 1 findes | Score:   7
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+% time elapsed: 1.90 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 142 / 173 ( 82%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | D· ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | ·· ( 0) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  44
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 0 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 1.93 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 143 / 173 ( 82%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 0 findes | Score:  29
+P3:  5 turnos | 1 findes | Score:  44
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+% time elapsed: 1.93 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 144 / 173 ( 83%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | DN ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | ·· ( 0) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  26
+P3:  5 turnos | 1 findes | Score:  45
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 0 findes | Score:  18
+
+Demanda total: 21 turnos
+% time elapsed: 3.27 s
+----------
+% Pruned 49999 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 50000 learnt clauses
+% Pruned 49999 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 145 / 173 ( 83%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | D· ( 8) | ·· ( 0) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | ·· ( 0) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  25
+P3:  5 turnos | 1 findes | Score:  44
+P4:  2 turnos | 0 findes | Score:  13
+P5:  2 turnos | 0 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  16
+
+Demanda total: 21 turnos
+% time elapsed: 7.13 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 146 / 173 ( 84%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  25
+P3:  5 turnos | 1 findes | Score:  44
+P4:  2 turnos | 0 findes | Score:  13
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+% time elapsed: 7.14 s
+----------
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49997 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 147 / 173 ( 84%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | D· ( 1) | ·· ( 0) | ·N (10) | ·· ( 0) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | ·· ( 0) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | ·· ( 0) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | D· (10) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  27
+P3:  5 turnos | 1 findes | Score:  43
+P4:  2 turnos | 0 findes | Score:  13
+P5:  2 turnos | 1 findes | Score:  20
+P6:  2 turnos | 1 findes | Score:  15
+
+Demanda total: 21 turnos
+% time elapsed: 18.01 s
+----------
+% Pruned 49996 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 50000 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 148 / 173 ( 85%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·N ( 8) | ·· ( 0) | ·· ( 0) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | ·· ( 0) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  32
+P3:  5 turnos | 1 findes | Score:  44
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 0 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+% time elapsed: 29.20 s
+----------
+% Pruned 49996 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49997 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 149 / 173 ( 86%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·N ( 8) | ·· ( 0) | ·· ( 0) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | ·· ( 0) | D· ( 9) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | D· ( 8) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | D· (10) | ·· ( 0) | ·· ( 0) | D· (10) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  34
+P3:  5 turnos | 1 findes | Score:  43
+P4:  2 turnos | 1 findes | Score:   6
+P5:  2 turnos | 0 findes | Score:  18
+P6:  2 turnos | 1 findes | Score:  19
+
+Demanda total: 21 turnos
+% time elapsed: 36.97 s
+----------
+% Pruned 49996 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 150 / 173 ( 86%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | D· (10) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  5 turnos | 1 findes | Score:  33
+P3:  3 turnos | 1 findes | Score:  26
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  2 turnos | 0 findes | Score:  18
+
+Demanda total: 21 turnos
+% time elapsed: 46.96 s
+----------
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 151 / 173 ( 87%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | ·· ( 0) | D· ( 4) | ·N (10) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 7 | ·· ( 0) | ·· ( 0) | DN (20) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  4 turnos | 1 findes | Score:  24
+P3:  4 turnos | 1 findes | Score:  36
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  2 turnos | 0 findes | Score:  18
+
+Demanda total: 21 turnos
+% time elapsed: 47.39 s
+----------
+% Pruned 49997 learnt clauses
+ASIGNACIÓN ÓPTIMA (o mejor conocida)
+Puntaje total: 152 / 173 ( 87%)
+
+LEGENDA: D=Día, N=Noche
+
+DÍA | P1 | P2 | P3 | P4 | P5 | P6 | DEMANDA
+----+------------------------------------------------------------------------------+----------
+ 1 | ·N (10) | D· ( 4) | ·· ( 0) | D· ( 3) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 2 | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 8) | D· ( 9) | T1:2 T2:1
+ 3 | DN ( 9) | D· ( 7) | ·· ( 0) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 4 | DN (10) | ·· ( 0) | D· ( 6) | ·· ( 0) | ·· ( 0) | ·· ( 0) | T1:2 T2:1
+ 5 | ·· ( 0) | ·N ( 9) | ·· ( 0) | ·· ( 0) | D· (10) | D· ( 9) | T1:2 T2:1
+ 6 | ·· ( 0) | ·· ( 0) | ·N (10) | D· ( 3) | ·· ( 0) | D· ( 6) | T1:2 T2:1
+ 7 | ·· ( 0) | ·N ( 9) | D· (10) | ·· ( 0) | D· (10) | ·· ( 0) | T1:2 T2:1
+
+======================================================================
+RESUMEN POR PERSONA:
+P1:  5 turnos | 0 findes | Score:  29
+P2:  4 turnos | 1 findes | Score:  29
+P3:  3 turnos | 1 findes | Score:  26
+P4:  3 turnos | 1 findes | Score:  16
+P5:  3 turnos | 1 findes | Score:  28
+P6:  3 turnos | 1 findes | Score:  24
+
+Demanda total: 21 turnos
+% time elapsed: 48.41 s
+----------
+% Pruned 49996 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 50000 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49999 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49998 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49995 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49994 learnt clauses
+% Pruned 49993 learnt clauses
+% Pruned 49992 learnt clauses
+% Pruned 49997 learnt clauses
+% Pruned 49996 learnt clauses
+% Pruned 49996 learnt clauses
+% Time limit exceeded!
+%%%mzn-stat: nodes=6554262
+%%%mzn-stat: failures=6115892
+%%%mzn-stat: restarts=30
+%%%mzn-stat: variables=1306
+%%%mzn-stat: intVars=85
+%%%mzn-stat: boolVariables=1219
+%%%mzn-stat: propagators=96
+%%%mzn-stat: propagations=130435635
+%%%mzn-stat: peakDepth=22
+%%%mzn-stat: nogoods=6115892
+%%%mzn-stat: backjumps=437785
+%%%mzn-stat: peakMem=0.00
+%%%mzn-stat: time=298.329
+%%%mzn-stat: initTime=0.003
+%%%mzn-stat: solveTime=298.326
+%%%mzn-stat: objective=152
+%%%mzn-stat: optTime=46.690
+%%%mzn-stat: baseMem=0.00
+%%%mzn-stat: trailMem=0.00
+%%%mzn-stat: randomSeed=1933904693
+%%%mzn-stat-end
+%%%mzn-stat: nSolutions=30
+%%%mzn-stat-end
+
+[ERRORES]
+WARNING: the --time-out flag has recently been changed.The time-out is now provided in milliseconds instead of seconds
+% Warning: Unknown or not support variable selection annotation 'dom_w_deg'! Ignore variable selection annotation and replace it by 'input_order'.

@@ -1,0 +1,46 @@
+ANÁLISIS DE DATOS - MEDIANAS
+==================================================
+
+Dataset: medianas_01.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 599.66 segundos
+Tiempo total ejecución: 600.20 segundos
+Timeout: NO
+------------------------------
+Dataset: medianas_02.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 599.70 segundos
+Tiempo total ejecución: 600.16 segundos
+Timeout: NO
+------------------------------
+Dataset: medianas_03.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 599.72 segundos
+Tiempo total ejecución: 600.16 segundos
+Timeout: NO
+------------------------------
+Dataset: medianas_04.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 599.58 segundos
+Tiempo total ejecución: 600.29 segundos
+Timeout: NO
+------------------------------
+Dataset: medianas_05.dzn
+Status: SOLUCIÓN(ES) ENCONTRADA(S)
+Soluciones encontradas: 0
+Tiempo primera solución: 599.78 segundos
+Tiempo total ejecución: 600.17 segundos
+Timeout: NO
+------------------------------
+
+RESUMEN ESTADÍSTICO:
+Total datasets: 5
+Total soluciones encontradas: 0
+Timeouts: 0
+Tiempo promedio primera solución: 599.69 segundos
+Tiempo máximo: 599.78 segundos
+Tiempo mínimo: 599.58 segundos
